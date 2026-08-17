@@ -1,0 +1,10 @@
+# The founder's own output folder. Their business data stays on their machine.
+#
+# The leading slash matters. Without it this pattern also matched
+# plugins/growth-engine/, which silently excluded every skill and command in
+# the plugin. Keep it anchored to the repo root.
+/growth-engine/
+
+.DS_Store
+*.log
+node_modules/

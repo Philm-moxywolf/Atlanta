@@ -1,0 +1,18 @@
+{
+  "name": "oneday-launchhouse",
+  "owner": {
+    "name": "Oneday Launchhouse",
+    "url": "https://github.com/Philm-moxywolf/Atlanta"
+  },
+  "metadata": {
+    "description": "The AI Growth Engine toolkit for Oneday Launchhouse Atlanta, September 2026.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "growth-engine",
+      "source": "./plugins/growth-engine",
+      "description": "Builds your content engine, outreach or audience engine, and operations engine. Works for both B2B and B2C founders."
+    }
+  ]
+}
