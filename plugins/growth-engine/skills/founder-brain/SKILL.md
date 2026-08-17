@@ -13,7 +13,7 @@ Output is a single file at `./growth-engine/founder-brain.md` in the founder's w
 
 ## Before starting
 
-Check whether `./growth-engine/founder-brain.md` already exists.
+Check whether `./growth-engine/founder-brain.md` already exists. If it is not in the current folder, check the parent folder and the home directory before concluding it does not exist. A founder who already built a Brain in another folder must not be re-interviewed into a second, conflicting one; point them at the folder they built in instead.
 
 - If it exists and the founder asked to build a new one, show them the current summary and ask whether to update it or start again.
 - If it exists and they asked to update, go straight to the section they want to change.
@@ -71,12 +71,16 @@ Do not ask B2B questions of a B2C founder or the reverse. It wastes their time a
 
 Proof matters more than founders expect. It is the raw material for every post and every message. If they have none, say so plainly and note it, because the content engine will lean on story and point of view instead.
 
+### The thesis
+
+From their Group 4 answers, compose one sentence: who they serve, the problem in the customer's own words, and why them rather than the obvious alternative. Read it back and adjust until they would say it out loud to a stranger. This is the thesis. It goes in the Brain, it is pressure-tested in Session 1, and it is part of their Gate 1 submission.
+
 ### Group 5: channels
 
 - Where do you currently publish, if anywhere?
 - Which channels do you have accounts on but do not use?
 - **If track is B2C**: is your Instagram a personal account, or Business or Creator? If personal, tell them to convert it now, because publishing and inbound capture will not work without it, and it takes two minutes.
-- **If track is B2B**: do you have a business domain with real email sending history, or will you need a fresh domain? Flag that a fresh domain needs six weeks of warmup and must be started immediately.
+- **If track is B2B**: do you have a business domain with real email sending history, or will you need a fresh domain? A fresh domain needs SPF, DKIM and DMARC configured now, plus ten to twenty real messages a day between now and the event. At 25 messages, correct setup matters more than months of warmup, but it cannot be crammed into the last week, so flag it as a start-today item.
 
 ## Voice capture
 
@@ -139,6 +143,9 @@ Write `./growth-engine/founder-brain.md` in this shape:
 - **Stage:**
 - **Locked:** YYYY-MM-DD
 
+## Thesis
+One sentence: who they serve, the problem in the customer's words, why them.
+
 ## Offer
 What they sell, how it is priced, the problem it solves in customer language, and why them.
 
@@ -170,9 +177,9 @@ The Flags section is what the mentor team reads before the session. Be honest in
 
 1. Show the founder a short summary and confirm it is right.
 2. Tell them the Brain is now locked and every other engine reads from it.
-3. Give them their gate submission line: track, business name, and confirmation the file exists.
+3. Give them their gate submission line: track, business name, the thesis, and confirmation the file exists.
 4. Tell them what happens next, based on track:
-   - **B2B**: start domain warmup today if the domain is fresh. Six weeks is the minimum before Atlanta.
+   - **B2B**: if the domain is fresh, set up SPF, DKIM and DMARC today and start sending ten to twenty real messages a day. Correct setup beats long warmup at 25-message volume, but it needs the weeks between now and Atlanta, not the last one.
    - **B2C**: convert Instagram to Business or Creator today, and link it to a Facebook Page.
 
 Both of those are time-critical and founders will forget. Say them last so they are the thing remembered.

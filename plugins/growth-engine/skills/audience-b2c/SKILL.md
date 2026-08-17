@@ -19,7 +19,7 @@ Read `./growth-engine/founder-brain.md`.
 
 If it does not exist, check the parent folder and the home directory before concluding it is missing. Founders commonly open Claude Code in a different folder from the one they built in.
 
-If it genuinely does not exist, stop. Tell the founder to run `/brain` first and do not proceed. Do not ask them to describe their business again from scratch, and do not guess at their offer, audience or voice. Everything this skill produces is only as good as the Brain behind it.
+If it genuinely does not exist, stop. Tell the founder to run `/growth-engine:brain` first (or to say "build my founder brain") and do not proceed. Do not ask them to describe their business again from scratch, and do not guess at their offer, audience or voice. Everything this skill produces is only as good as the Brain behind it.
 
 If `track` is not `b2c`, stop and route the founder to the outreach-b2b skill instead.
 
@@ -58,11 +58,15 @@ Output to `./growth-engine/dm-openers.md`, numbered, with the target handle agai
 
 30 hooks for short-form content and DM openers. Categorised: curiosity, contrarian, result, mistake, question, story-open.
 
-Hooks are the highest-leverage copy a B2C founder owns. Spend real effort here.
+Hooks do more work per word than anything else a B2C founder writes. Spend real effort here.
+
+Output to `./growth-engine/hook-bank.md`, grouped by category.
 
 ## Step 4: offer tests
 
 Three variants of how the offer is framed, to test against each other. Different angle, not different wording. Note what each is testing.
+
+Add them to `./growth-engine/hook-bank.md` under an Offer tests heading, so the hook bank and the offer tests travel as one file.
 
 ## Step 5: the inbound machine
 

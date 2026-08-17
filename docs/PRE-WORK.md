@@ -1,6 +1,6 @@
 # Pre-work: do this now
 
-Sent mid-August. Everything here must be done before Session 1 in the week of 7 September.
+Sent 4 September. Everything here must be done before Session 1 in the week of 7 September.
 
 Two of these items are time-critical and cannot wait for the sessions. They are marked.
 
@@ -12,22 +12,40 @@ This is a real cost and it is required.
 
 ## 2. Install Claude Desktop
 
-Download the desktop app and sign in. Nothing to install with a command line.
+Download the desktop app and sign in.
 
-## 3. Add the marketplace and install the plugin
+One important thing: **install and sign in on the Claude account you will bring to Atlanta.** If you have a work account and a personal account, pick one now and stay on it. The plugin installs per account, and switching later means installing again and hunting for your files.
+
+## 3. Install the toolkit
+
+Two ways in. Use whichever matches where you are.
+
+**In the desktop app:** click the + button next to the message box, choose Plugins, and add the marketplace `Philm-moxywolf/Atlanta`. Then install `growth-engine` from it.
+
+**In Claude Code (the terminal):** paste these two lines exactly as written:
 
 ```
 /plugin marketplace add Philm-moxywolf/Atlanta
 /plugin install growth-engine@oneday-launchhouse
 ```
 
+If neither route works on your machine, post in the Slack channel and we will get you installed individually. Do not lose an evening to it.
+
 ## 4. Check it worked
 
-Start a new conversation and type `/setup`.
+Start a new conversation and type:
+
+```
+/growth-engine:setup
+```
+
+You can also just say "check my setup". Both work.
 
 It will check everything, tell you which folder your work will live in, and tell you if anything is wrong. If it reports you are set up and have not started yet, you are done. Stop there. We build the rest together in Session 1.
 
-If anything at all does not work, type `/doctor` and it will walk you through it. If that does not fix it, post in the Slack channel.
+**If the command does not appear**, run `/reload-plugins`, or quit and reopen the app, then try again. That fixes it nearly every time.
+
+If anything still does not work, type `/growth-engine:doctor` (or say "something is broken") and it will walk you through it. If that does not fix it, post in the Slack channel.
 
 ## Which one should I use, Cowork or Claude Code?
 
@@ -41,15 +59,19 @@ Use Claude Code instead only if you already work with files and code and would r
 
 We will improve the toolkit during the programme. Updates are not automatic.
 
-If something behaves differently from what you saw in a session, run:
+**In Claude Code**, run:
 
 ```
 /plugin marketplace update oneday-launchhouse
 ```
 
-We will tell you in Slack when there is an update worth taking.
+Then reinstall the plugin if prompted.
 
-## 5. If you sell to businesses
+**In the desktop app**, open Plugins from the + menu and update `growth-engine` from there.
+
+We will tell you in Slack when there is an update worth taking, with the exact steps.
+
+## 5. TIME-CRITICAL if you sell to businesses
 
 Work out whether you have a business domain that already sends email regularly.
 
@@ -82,7 +104,7 @@ GoHighLevel is your CRM, your social publishing and your automation. Required fo
 
 Everything the plugin produces goes into a folder called `growth-engine`.
 
-**Pick one folder on your computer and always open Claude Code in that same folder.** If you open it somewhere different each time, your work will be scattered and you will not find it in Atlanta.
+**Pick one folder on your computer and always open that same folder**, whether you are in Cowork or Claude Code. If you open a different folder each time, your work will be scattered and you will not find it in Atlanta.
 
 ## Stuck
 

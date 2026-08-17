@@ -15,7 +15,7 @@ Read all of these that exist:
 - `./growth-engine/outreach-sequence.md` (B2B) or `./growth-engine/dm-openers.md` and `inbound-scripts.md` (B2C)
 - `./growth-engine/ops-workflow.md`
 
-If `founder-brain.md` itself is missing, check the parent folder and home directory first. If it genuinely does not exist, stop and tell the founder to run `/brain`. There is no plan to build without it.
+If `founder-brain.md` itself is missing, check the parent folder and home directory first. If it genuinely does not exist, stop and tell the founder to run `/growth-engine:brain`, or to say "build my founder brain". There is no plan to build without it.
 
 If the Brain exists but engine files are missing, build the plan from what exists and note the gaps honestly. Do not pretend an engine is running when it is not.
 

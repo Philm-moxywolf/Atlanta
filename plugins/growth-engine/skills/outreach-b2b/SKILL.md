@@ -13,7 +13,7 @@ Read `./growth-engine/founder-brain.md`.
 
 If it does not exist, check the parent folder and the home directory before concluding it is missing. Founders commonly open Claude Code in a different folder from the one they built in.
 
-If it genuinely does not exist, stop. Tell the founder to run `/brain` first and do not proceed. Do not ask them to describe their business again from scratch, and do not guess at their offer, audience or voice. Everything this skill produces is only as good as the Brain behind it.
+If it genuinely does not exist, stop. Tell the founder to run `/growth-engine:brain` first (or to say "build my founder brain") and do not proceed. Do not ask them to describe their business again from scratch, and do not guess at their offer, audience or voice. Everything this skill produces is only as good as the Brain behind it.
 
 If `track` is not `b2b`, stop and route the founder to the audience-b2c skill instead. Do not run a B2B sequence for a B2C founder.
 
@@ -71,7 +71,7 @@ Write `./growth-engine/outreach-sequence.md` with the full sequence and variable
 
 Write `./growth-engine/outreach-firstlines.csv` with columns `email`, `first_name`, `company`, `custom_1`, where `custom_1` holds the generated first line.
 
-Confirm the GHL import column headers at build time.
+Confirm the GHL import column headers at build time, and verify the merge-variable syntax ({{first_name}} and the rest) against a real GHL import at the same time. Both are conventions that change, and both fail silently at scale.
 
 ## Gate
 

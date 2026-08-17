@@ -5,7 +5,7 @@
 - **Track:** b2b
 - **Hybrid:** false
 - **Stage:** First customers, roughly 6k GBP per month
-- **Locked:** 2026-09-08
+- **Locked:** 2026-08-19
 
 ## Offer
 

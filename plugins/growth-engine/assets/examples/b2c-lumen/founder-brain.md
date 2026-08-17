@@ -4,8 +4,8 @@
 - **Business:** Lumen Skin
 - **Track:** b2c
 - **Hybrid:** false
-- **Stage:** Trading, roughly 4k GBP per month
-- **Locked:** 2026-09-08
+- **Stage:** Under 10k a month, roughly 4k GBP
+- **Locked:** 2026-08-21
 
 ## Offer
 

@@ -9,7 +9,9 @@ Produces the 30 pieces of content each founder loads into GHL Social Planner bef
 
 ## Prerequisites
 
-Read `./growth-engine/founder-brain.md`. If it does not exist, stop and tell the founder to run the founder-brain skill first. Do not guess at their business or voice.
+Read `./growth-engine/founder-brain.md`. If it does not exist, check the parent folder and the home directory before concluding it is missing. Founders commonly open a different folder from the one they built in.
+
+If it genuinely does not exist, stop and tell the founder to run `/growth-engine:brain` first, or to say "build my founder brain". Do not guess at their business or voice.
 
 Read the `track` field. Everything below branches on it.
 

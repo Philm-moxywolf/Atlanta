@@ -11,7 +11,7 @@ Produces the four to six page personalised insert that prints with the generic p
 
 Read every file in `./growth-engine/`. If the folder is missing, check the parent folder and home directory before concluding the founder has done nothing.
 
-If `founder-brain.md` does not exist, stop and tell the founder to run `/brain`. There is nothing to compile.
+If `founder-brain.md` does not exist, stop and tell the founder to run `/growth-engine:brain` (or say "build my founder brain"). There is nothing to compile.
 
 This is a compilation task, not a generation task. Do not invent content that is not already in the founder's own files. If a section has no source file, leave it out and say so, rather than writing filler.
 

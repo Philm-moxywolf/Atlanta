@@ -21,9 +21,9 @@ Read whatever exists and report against this checklist. Show track first, becaus
 |---|---|---|
 | founder-brain.md | Brain locked, thesis written | 1 |
 | content-30.md and content-30.csv | 30 pieces generated and edited | 2 |
-| rss-feeds.md | Optional source list | 2 |
-| outreach-sequence.md, outreach-firstlines.csv | B2B: sequence approved, list built | 3 |
-| dm-openers.md, inbound-scripts.md | B2C: 25 openers, inbound scripts | 3 |
+| rss-feeds.md | Source list for the monthly refill | 2 |
+| outreach-sequence.md, outreach-firstlines.csv | B2B: sequence approved, list criteria defined, list built, first lines for the first 25 | 3 |
+| dm-openers.md, hook-bank.md, inbound-scripts.md | B2C: 25 openers, hook bank with offer tests, inbound scripts | 3 |
 | ops-workflow.md | Bottleneck named, snapshot chosen, copy written | 3 |
 | 90-day-plan.md | Built in Atlanta on Sunday | Weekend |
 | playbook-insert.md | Generated before the print deadline | Pre-Atlanta |

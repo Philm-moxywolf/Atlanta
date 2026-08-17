@@ -26,7 +26,7 @@ If they are unsure which they are using or which to use, tell them to stay in Co
 
 If this skill is running, it is. Say so plainly, because founders often assume something is broken when it is not.
 
-Report the plugin version from `.claude-plugin/plugin.json` if it is readable.
+Report the plugin version from the plugin's own manifest, `${CLAUDE_PLUGIN_ROOT}/.claude-plugin/plugin.json`, if it is readable. Do not read `.claude-plugin/plugin.json` as a relative path, because that resolves against the founder's working folder, not the plugin.
 
 ### 3. Find the working folder
 
@@ -38,7 +38,7 @@ Look for `./growth-engine/`. If it is not in the current folder, check the paren
 
 **If you find more than one**, this is a real problem. Show them each location with what it contains and how recently it was modified. Help them decide which is the real one. Do not merge them automatically or delete anything. Tell them to move the others aside rather than delete, in case something useful is in them.
 
-**If none exists**, create `./growth-engine/` in the current folder, tell them the full path, and tell them to note it down. Then route them to `/brain`.
+**If none exists**, create `./growth-engine/` in the current folder, tell them the full path, and tell them to note it down. Then route them to `/growth-engine:brain`, or tell them to say "build my founder brain".
 
 ### 4. Check progress
 
@@ -57,19 +57,18 @@ Raise these even if the founder asked about something else. They are the two ite
 
 The plugin will be updated during the runway. Founders do not get updates automatically.
 
-To update:
+To update, the route depends on where they are:
 
-```
-/plugin marketplace update oneday-launchhouse
-```
+- **Claude Code (terminal):** run `/plugin marketplace update oneday-launchhouse`, then reinstall the plugin if prompted.
+- **Desktop app or Cowork:** open Plugins from the + menu next to the message box and update `growth-engine` there.
 
-Then reinstall the plugin if prompted.
+Updating or reinstalling never touches the founder's `growth-engine/` folder. Their work lives in their own folder, not inside the plugin. Say this if they hesitate.
 
 If a founder reports behaviour that does not match what they were told in a session, updating is the first thing to try.
 
 ## Common problems
 
-**"The commands are not there."** The plugin is not installed, or they are in a different Claude account from the one they installed it on. Send them back to the pre-work doc.
+**"The commands are not there."** Three causes, in order of likelihood. First: they typed the command without its prefix. Every command starts with `/growth-engine:`, so the check is `/growth-engine:setup`, and plain language works too. Second: the plugin installed but has not loaded yet. Run `/reload-plugins`, or quit and reopen the app. Third: they are in a different Claude account from the one they installed on. Send them back to the pre-work doc only if all three fail.
 
 **"It asked me about my business again."** They are in the wrong folder. Run check 3. Their existing Brain is almost certainly intact somewhere else.
 
