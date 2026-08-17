@@ -1,6 +1,8 @@
 # Worked examples
 
-Two complete reference founders, one per track. Every file the plugin produces, filled in properly.
+Two reference founders, one per track.
+
+**Not finished yet.** Each folder currently holds the Founder Brain only. The rest of the files arrive once the plugin has been run end to end as each founder, which happens before Session 1. Until then, treat these as the starting input rather than the target.
 
 | Folder | Founder | Track | Business |
 |---|---|---|---|

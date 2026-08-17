@@ -11,4 +11,4 @@ Six snapshot share links go here, three per track, built in the agency account a
 | B2C | DM qualify and book | TODO |
 | B2C | Review request | TODO |
 
-Tasks 36 and 37 in TASKS.md. If a snapshot changes after publication, update the link here and announce in Slack.
+If a snapshot changes after publication, update the link here and announce in Slack.

@@ -1,6 +1,6 @@
 # Gate forms
 
-Three Google Form links plus the tracking sheet. Task 39 in TASKS.md.
+Three Google Form links plus the tracking sheet.
 
 Google Forms, not Typeform. Typeform's free tier caps at 10 responses a month and these three gates take over 390.
 
