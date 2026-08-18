@@ -7,6 +7,10 @@
 - **Stage:** First customers, roughly 6k GBP per month
 - **Locked:** 2026-08-19
 
+## Thesis
+
+I take the admin off owner-managed construction firms turning over 1M to 5M, so the owner stops doing job costing at 10pm. I do it as someone who ran sites for fifteen years, not as a consultant who has read about it.
+
 ## Offer
 
 Fractional operations support for construction SMEs turning over 1M to 5M. Sam takes over scheduling, subcontractor coordination and job costing for firms where the owner is still running it all from a phone and a whiteboard.
@@ -45,6 +49,10 @@ Three new retainers. That is roughly 7k GBP per month added, which takes him pas
 - **Active:** LinkedIn, posts sporadically, roughly twice a month. 1,400 connections, mostly genuine industry.
 - **Dormant:** X account, unused since 2023.
 - **Email:** northfieldops.co.uk, has real sending history from client correspondence. No fresh domain needed.
+
+**Destinations.** Website northfieldops.co.uk, one page, dated. No booking link yet, so calls get arranged by email back and forth. Sender name on email is Sam Okoye, phone 07700 900412. Setting up a booking link is the first thing his ops workflow should fix.
+
+**Baselines, today.** LinkedIn 1,400 connections. No email list. No CRM. Roughly two inbound enquiries a month, both by word of mouth.
 
 ## Source material
 

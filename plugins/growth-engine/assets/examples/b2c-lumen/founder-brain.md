@@ -7,6 +7,10 @@
 - **Stage:** Under 10k a month, roughly 4k GBP
 - **Locked:** 2026-08-21
 
+## Thesis
+
+I make a three-product range for people whose skin reacts to everything, so they can stop spending money on things that make it worse. I make it because that was my face for two years.
+
 ## Offer
 
 Three-product skincare line for people with reactive, easily irritated skin. A cleanser, a barrier cream and a single serum. Deliberately small range.
@@ -46,6 +50,10 @@ Double monthly revenue to 8k. The realistic route is the existing audience buyin
 - **Owned:** Email list of 610 from website signups. Emailed twice ever.
 
 The email list is the most underused asset in the business.
+
+**Destinations.** Website lumenskin.co.uk with product pages and a bundle page, which is where most revenue sits. Link in bio currently points at the homepage rather than the bundle. No booking link, this is ecommerce. Sender name on email is Priya, replies come to hello@lumenskin.co.uk.
+
+**Baselines, today.** Instagram 2,100 followers. TikTok 180 followers, dormant. Email list 610, emailed twice ever. 340 customers, 31 per cent reordered. Roughly 4k GBP a month.
 
 ## Source material
 
