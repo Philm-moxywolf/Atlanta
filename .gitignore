@@ -8,3 +8,6 @@
 .DS_Store
 *.log
 node_modules/
+
+# Build artifact. Ship it as a release asset, not in the tree.
+/dist/
