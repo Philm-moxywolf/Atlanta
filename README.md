@@ -2,6 +2,8 @@
 
 Claude plugin for Launchhouse Atlanta, 25 to 27 September 2026.
 
+> **Pre-release.** This is version 0.1.0 and is still being built and tested. Founders on the programme receive the finished version, with setup instructions, on 4 September. Nothing here is final until then.
+
 ## Install
 
 You install once. Cowork and Claude Code share the same plugin, so it is available in both.
