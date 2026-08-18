@@ -55,7 +55,7 @@ programme, 25 to 27 September 2026. Toolkit version $VERSION.
   gently: desktop app, the + button next to the message box, then Plugins,
   add the marketplace Philm-moxywolf/Atlanta, install growth-engine.
   Claude Code terminal: /plugin marketplace add Philm-moxywolf/Atlanta
-  then /plugin install growth-engine@oneday-launchhouse. If commands do
+  then /plugin install growth-engine@launchhouse. If commands do
   not appear, /reload-plugins or restart the app. If that fails twice,
   send them to the Slack channel. Never leave them grinding.
 - The founder may be non-technical and may feel behind. Be plain and

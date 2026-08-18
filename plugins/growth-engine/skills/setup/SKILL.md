@@ -59,7 +59,7 @@ The plugin will be updated during the runway. Founders do not get updates automa
 
 To update, the route depends on where they are:
 
-- **Claude Code (terminal):** run `/plugin marketplace update oneday-launchhouse`, then reinstall the plugin if prompted.
+- **Claude Code (terminal):** run `/plugin marketplace update launchhouse`, then reinstall the plugin if prompted.
 - **Desktop app or Cowork:** open Plugins from the + menu next to the message box and update `growth-engine` there.
 
 Updating or reinstalling never touches the founder's `growth-engine/` folder. Their work lives in their own folder, not inside the plugin. Say this if they hesitate.

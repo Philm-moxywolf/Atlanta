@@ -12,7 +12,7 @@ You install once. Cowork and Claude Code share the same plugin, so it is availab
 
 ```
 /plugin marketplace add Philm-moxywolf/Atlanta
-/plugin install growth-engine@oneday-launchhouse
+/plugin install growth-engine@launchhouse
 ```
 
 If the commands do not appear straight after installing, run `/reload-plugins` or restart the app, then check again.

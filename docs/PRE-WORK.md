@@ -26,7 +26,7 @@ Two ways in. Use whichever matches where you are.
 
 ```
 /plugin marketplace add Philm-moxywolf/Atlanta
-/plugin install growth-engine@oneday-launchhouse
+/plugin install growth-engine@launchhouse
 ```
 
 If neither route works on your machine, post in the Slack channel and we will get you installed individually. Do not lose an evening to it.
@@ -62,7 +62,7 @@ We will improve the toolkit during the programme. Updates are not automatic.
 **In Claude Code**, run:
 
 ```
-/plugin marketplace update oneday-launchhouse
+/plugin marketplace update launchhouse
 ```
 
 Then reinstall the plugin if prompted.
