@@ -79,7 +79,9 @@ Work out whether you have a business domain that already sends email regularly.
 
 Three records to get right, and your registrar or email provider will walk you through them: SPF, DKIM and DMARC. Without them your mail gets filtered regardless of how long the domain has existed.
 
-Then send a small amount of normal email from it between now and September. Ten to twenty a day, real messages to real people. That is enough at this volume.
+Then send a small amount of normal email from it every weekday between now and Atlanta. Ten to twenty a day, real messages to real people. That is enough at this volume.
+
+A fresh domain needs at least three weeks of this. If you are buying one after roughly 8 September, use an existing domain with real sending history instead, even if the name is less tidy. An older domain that already sends beats a perfect new one that does not.
 
 Reply to the Slack thread if you are unsure and we will sort it individually.
 
@@ -95,7 +97,7 @@ Two minutes. Nothing publishes or captures inbound without it.
 |---|---|---|
 | Claude paid plan | Now | Monthly |
 | Domain, if needed | Now | Roughly 15 USD/year |
-| Apollo | Session 3, B2B only | Free within limits |
+| Apollo, B2B only | Session 3 | Free. Works with Gmail and Google Workspace. On Microsoft 365 you will send by hand instead, which costs nothing and works fine at 25 messages |
 | GoHighLevel Starter | Setup clinic, 23 September | 97 USD/month plus usage |
 
 GoHighLevel is your CRM, your social publishing and your automation. Required for both tracks. Pay for it at the clinic rather than starting a trial, because a trial will expire during the weekend.

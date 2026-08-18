@@ -48,7 +48,7 @@ Three new retainers. That is roughly 7k GBP per month added, which takes him pas
 
 - **Active:** LinkedIn, posts sporadically, roughly twice a month. 1,400 connections, mostly genuine industry.
 - **Dormant:** X account, unused since 2023.
-- **Email:** northfieldops.co.uk, has real sending history from client correspondence. No fresh domain needed.
+- **Email:** northfieldops.co.uk on Google Workspace, with real sending history from client correspondence. No fresh domain needed, and Apollo can send from it.
 
 **Destinations.** Website northfieldops.co.uk, one page, dated. No booking link yet, so calls get arranged by email back and forth. Sender name on email is Sam Okoye, phone 07700 900412. Setting up a booking link is the first thing his ops workflow should fix.
 

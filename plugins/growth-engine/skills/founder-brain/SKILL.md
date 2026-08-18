@@ -80,6 +80,7 @@ From their Group 4 answers, compose one sentence: who they serve, the problem in
 - Where do you currently publish, if anywhere?
 - Which channels do you have accounts on but do not use?
 - **If track is B2C**: is your Instagram a personal account, or Business or Creator? If personal, tell them to convert it now, because publishing and inbound capture will not work without it, and it takes two minutes.
+- **If track is B2B**: which provider is their work email on, Google (Gmail or Google Workspace), Microsoft 365, or something else? This decides how they send their 25 messages later, so record it plainly. It is not a technical question to them: "what do you open your work email in" gets the answer.
 - **If track is B2B**: do you have a business domain with real email sending history, or will you need a fresh domain? A fresh domain needs SPF, DKIM and DMARC configured now, plus ten to twenty real messages a day between now and the event. At 25 messages, correct setup matters more than months of warmup, but it cannot be crammed into the last week, so flag it as a start-today item.
 
 ## Voice capture
@@ -159,7 +160,7 @@ Results, numbers, named customers, testimonials, credentials. Note explicitly if
 ## Goal, next 90 days
 
 ## Channels
-Active, dormant, and account status. Note IG account type for B2C, domain status for B2B.
+Active, dormant, and account status. Note IG account type for B2C, domain status and work email provider (Google, Microsoft 365, other) for B2B.
 
 ## Source material
 Five to ten accounts, competitors, newsletters or feeds their audience already reads. Topics only, not voice.
