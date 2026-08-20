@@ -1,0 +1,22 @@
+#!/bin/sh
+# ge-test — Gate B probe: proves a shipped sh binary runs and a hook fires.
+#
+# WHY IT EXISTS: the whole brain (Phase 2) assumes bin/ge is reachable and that
+#                SessionStart can call it. If either is false on any founder
+#                surface, Phase 2's design changes. Better to know in Phase 0.
+# CALLED BY:     the SessionStart hook, and by hand during the spike
+# READS:         nothing            WRITES: nothing (stdout only)
+# POSTURE:       fail-open — a probe must never wedge a session
+# PORTABILITY:   POSIX sh. No bash/python/node/jq.
+# EVERY ERROR MESSAGE ENDS WITH A RECOVERY LINE ("→ run: ...").
+set -u
+
+mode="${1:-manual}"
+
+# uname is in every POSIX environment including Git Bash on Windows.
+os="$(uname -s 2>/dev/null || echo unknown)"
+
+printf 'GATE-B-MARKER mode=%s os=%s shell=%s\n' "$mode" "$os" "${SHELL:-unset}"
+printf 'GATE-B-PLUGIN-ROOT=%s\n' "${CLAUDE_PLUGIN_ROOT:-unset}"
+
+exit 0

@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "spike": {
+      "type": "http",
+      "url": "https://services.leadconnectorhq.com/mcp/",
+      "headers": {
+        "Authorization": "Bearer ${user_config.spike_token}",
+        "locationId": "${user_config.spike_location_id}"
+      }
+    }
+  }
+}

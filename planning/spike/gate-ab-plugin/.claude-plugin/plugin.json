@@ -1,0 +1,19 @@
+{
+  "name": "gate-ab-probe",
+  "version": "0.0.1",
+  "description": "Throwaway probe for PRD Phase 0 decision gates A and B. Not for founders. Delete after the spike.",
+  "author": { "name": "Philip Mudhir" },
+  "userConfig": {
+    "spike_token": {
+      "type": "string",
+      "sensitive": true,
+      "title": "Spike token (type a DUMMY value)",
+      "description": "Gate A probe. Type pit-DUMMY-not-real. Never type a live token here."
+    },
+    "spike_location_id": {
+      "type": "string",
+      "title": "Spike location id (type a DUMMY value)",
+      "description": "Gate A probe. Type loc-DUMMY."
+    }
+  }
+}
