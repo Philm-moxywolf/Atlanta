@@ -25,13 +25,13 @@ They are separate files because the whole plan runs to about 10,813 lines, and o
 
 ## The three numbers that matter
 
-**40.2 dev-days**, against 31.0 in the PRD as written.
+**44.95 dev-days**, against 31.0 in the PRD as written.
 
-That is 39.2 for the build in section 02, plus 1.0 for the persistent memory layer in section 08.
+That is 39.2 for the original build in section 02, plus 1.0 for the persistent memory layer in section 08, plus 4.75 merged in from section 04's own registry on 21 August.
 
 The difference is not scope creep. Cutting the DM inbox saved 2.25 days. Of the rest, 1.0 is the memory layer added on 20 August after reviewing the Glitch brain, and 10.45 are work the PRD already assumed had happened: the schema files it points at, the `ge` subcommands two of its own state files need, the four command routers it declares twice and never builds, the approve step its publish precondition depends on, the two orphan skills that write founder files with no snapshot, and one end-to-end run of a twelve-skill chain that until now was first exercised by 130 founders on the day.
 
-**8.45 days are recoverable** through the cut order in section 02, which names what goes first and why each is safe.
+**The cut order in section 02 is a record, not a plan.** Decision 1 was to build it all, so the **8.45 days are recoverable** on paper but are not being taken. It stays written so that if the date moves the options are already sized.
 
 **About 3.5 days of that is not the executor's**, it is account setup, vendor UI work and clean-machine time. It runs alongside rather than adding.
 
@@ -52,38 +52,59 @@ That leaves the Private Integration Token needing exactly these seven scopes:
 2. Run task `T-00` in section 02: triage the 95 verified findings in `/Users/pmudh/Downloads/Atlanta/launchhouse-atlanta/planning/FUNCTIONAL-REVIEW.md`. Half a day, and it stops the rest being rediscovered one at a time.
 3. Do the spike, `S-01` through `S-07` minus the cut `S-04`. It is almost all Philip's, and nothing downstream may invent an API field, header, tool name or CSV column that is not in `planning/spike-findings.md` with pasted evidence.
 
-## Seven decisions this plan needs and cannot make for you
+## Decisions, as taken on 21 August 2026
 
-Each is flagged in place. None blocks starting.
+| # | Decision | Answer |
+|---|---|---|
+| 1 | Scope under the lane pressure | **Build it all. No cutting scope.** The cut order in section 02 stays written as a record of what would go first, but it is not to be used |
+| 2 | Merge section 04's registry into section 02's | **Yes.** In progress |
+| 3 | Which GoHighLevel tier founders buy | **The 97 dollar Starter tier.** Named in the founder docs and the cost table |
+| 5 | `playbook-export` | **Remove it, and rebuild it once the architecture is settled end to end.** It is not part of v1.0 |
+| 7 | Push | **After the remaining repairs**, not before |
+
+### Consequence of decision 1 that is not yet resolved
+
+Building it all removes the cut lever, and the arithmetic does not close on its own.
+Lane 1.0 carries 28.60 dev-days into roughly 10 working days before the 3 September freeze, with one executor.
+Two levers remain and both are Philip's: **move the freeze date**, or **add a second pair of hands**.
+Nothing in this plan can be executed to a fixed date until one of them is pulled.
+
+### Consequence of decision 3 that the spike must confirm
+
+The 97 dollar Starter tier is the answer, and spike `S-01` has to prove two things hold at that tier before anything is built on it.
+One: that Private Integration Tokens are available at all, since the whole credential design depends on them.
+Two: that the comment-to-DM trigger and inbound Instagram capture work there, because that is the B2C operations track for roughly 65 founders.
+If either sits above Starter, the tier decision or the B2C ops design has to move, and that is better known in August than in September.
+
+## Still open
+
+| # | Decision | Why it cannot wait indefinitely |
+|---|---|---|
 
 | # | Decision | Why it cannot wait indefinitely |
 |---|---|---|
 | 1 | **The Session 2 token question.** Either `G2-01` moves into lane 1.0, pulling 1.5 days forward, or token creation moves to the 23 September clinic | `docs/PRE-WORK.md` cannot be finished without it, and that text freezes when the onboarding email goes out |
-| 2 | **Which GoHighLevel tier founders buy.** No source document names one, and comment-to-DM may need a higher tier than the test account | Two documents consume the tier name and price, and founders are told to pay for it |
-| 3 | **`X-01`, the full-arc run.** It sits in lane 1.0 but depends on lane 1.1 skills. Section 02 splits it into `X-01a` and `X-01b` at the same total | It changes when the finished example folders exist for the mentors |
 | 4 | **`docs/CONNECTIONS.md` in the README.** `D-01` links it in lane 1.0; `G2-03` writes it in lane 1.1. Either move the link or ship a stub | 130 founders receive that README, and a dead link is a founder-visible defect |
-| 5 | **`playbook-export`.** Deferred by section 00, with a full task body written in case it is taken | It compiles from files that are still changing shape |
-| 7 | **Merge section 04's registry into section 02's.** `EX-01..11` and `D-05..12` are real work, 11.1 days gross, sitting outside the headline number. Four are duplicates to collapse | `docs/USING-IT.md` and `docs/TROUBLESHOOTING.md` live in there, and without them a founder has no manual. Do this before task one |
 | 6 | **When the TODO gate turns hard.** Promoting it to a failure before task `O-01` lands the three share links will fail the build immediately | It is the check that stops placeholder links reaching founders |
 
 ## Two numbering schemes, and what each governs
 
 The plan uses more than one id series. They are not interchangeable, and mistaking one for another is how work gets skipped.
 
-| Prefix | Meaning | Defined in | Counted in the 40.2? |
+| Prefix | Meaning | Defined in | Counted in the 44.95? |
 |---|---|---|---|
 | `T-`, `S-`, `G-`, `B-`, `FB-`, `C-`, `GP-`, `AB-`, `PB-`, `SS-`, `CMD-`, `D-01..04`, `CI-`, `X-`, `R-`, `G2-`, `A-`, `O-` | Build tasks | Section 02, and `B-10` in section 08 | **Yes** |
-| `EX-01..11` | Example-generation tasks | Section 04 Part A | **No, see below** |
-| `D-05..12` | Documentation tasks | Section 04 Part B | **No, see below** |
+| `EX-01..05`, `EX-11` | Example-harness tasks, merged into section 02 on 21 August | Section 04 Part A, stubbed in section 02 before `X-01` | **Yes** |
+| `EX-06..10` | Absorbed or closed: `EX-06` already applied, `EX-07..09` are the procedure for `X-01`, `EX-10` folds into `FB-02` | Section 04 Part A | Absorbed, not counted twice |
+| `D-06`, `D-07`, `D-10`, `D-11` | Documentation tasks, merged into section 02 Phase 7 on 21 August | Section 04 Part B, stubbed in section 02 | **Yes** |
+| `D-05`, `D-08`, `D-09`, `D-12` | Duplicates of `G2-03`, `G-02`, `G-01` and `O-02` | Section 04 Part B | Absorbed, not counted twice |
 | `CK-01..31` | Validator checks that exist today | Section 03, local reference only | Not tasks |
 | `V-01` upward | Validator checks this plan adds | Section 03, local reference only | Not tasks |
 
-**Section 04 carries its own task registry, and it is not inside the 40.2.**
-Part A totals 5.1 days and Part B totals 6.0 days, so 11.1 days in all.
-Four of those absorb tasks section 02 already counts: `D-05` absorbs `G2-03`, `D-08` absorbs `G-02`, `D-09` absorbs `G-01`, and `D-12` absorbs `O-02`.
-The remainder is genuinely additional work, and it includes `D-06`, the day-to-day manual at `docs/USING-IT.md`, and `D-07`, `docs/TROUBLESHOOTING.md`.
-
-Those two are how a founder learns to replace content, regenerate a batch, run the monthly refill and undo a mistake. Neither has a task in section 02. **So the honest headline is 40.2 for the build plus the unabsorbed remainder of section 04, and reconciling the two registries into one is the first thing to do before execution starts.** It is listed as decision 7 below.
+**Section 04's registry has been merged, as of 21 August 2026.**
+Part A totalled 5.10 days and Part B 6.00 days. Of that 11.10, six tasks were duplicates of work section 02 already counted, three were the detailed procedure for `X-01` rather than separate work, one had already been applied by hand, and one folded into `FB-02`.
+What was genuinely new is 4.75 days and it is now stubbed inside section 02, in Phase 7 for the documents and immediately before `X-01` for the examples harness.
+That includes `D-06`, the day-to-day manual at `docs/USING-IT.md`, which is client requirement 3 and previously had no task anywhere in the build.
 
 ## The rules that govern the work
 

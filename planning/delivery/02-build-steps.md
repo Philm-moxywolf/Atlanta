@@ -74,16 +74,18 @@ It does not look at `REPO/planning/`, so nothing in that folder is style-checked
 | Less the DM inbox cut (S-04 0.25, B-07 0.5, G2-02 1.5) | **minus 2.25** |
 | PRD baseline after the cut | 28.75 |
 | Plus the work the gap register proved was never priced | **plus 10.45** |
-| Subtotal, every task below EXCEPT B-10 | 39.20 |
+| Subtotal, every task below EXCEPT B-10 and the section 04 merge | 39.20 |
 | `B-10`, the memory layer (the task stub is printed below, in Phase 2) | plus 0.75 |
 | The amendments B-10 makes to B-00, B-02, B-06, B-08, C-01 and SS-01 | plus 0.25 |
-| **Revised total** | **40.20 dev-days** |
+| Merged from section 04 Part B: `D-06`, `D-07`, `D-10`, `D-11` | plus 2.35 |
+| Merged from section 04 Part A: `EX-01` to `EX-05` and `EX-11`, plus `EX-10` folded into `FB-02` | plus 2.60 |
+| **Revised total** | **44.95 dev-days** |
 
 Re-summing the task headings below gives 39.95, not 39.20, because `B-10` is printed in Phase 2 and carries its own 0.75.
 The first row deliberately excludes it so the three added rows do not double-count. Full detail for `B-10` is in section 08.
 
 Plus roughly 3.5 days of Philip's own time on the ⚑HUMAN tasks (S-01, S-02, S-03, S-05, S-06, S-07, O-01, and the clean-machine half of R-01).
-That time runs alongside the executor's, it does not add to the 40.2.
+That time runs alongside the executor's, it does not add to the 44.95.
 
 The 10.45 added days are not scope creep.
 They are work the PRD already assumed had happened: the schema files it points at, the `ge` subcommands two of its own state files need, the four command routers it declares twice and never builds, the approve step its publish precondition depends on, the two orphan skills that write founder files with no snapshot, and one end-to-end run of a twelve-skill chain that until now was first exercised by 130 founders on 25 September.
@@ -94,7 +96,7 @@ The founder still reads and replies to DMs. They do it in the GoHighLevel app, a
 
 ---
 
-### The cut order, if 40.2 does not fit
+### The cut order, kept as a record only
 
 Cut in this order, top first.
 Each line names what is lost and why the loss is survivable.
@@ -1330,7 +1332,7 @@ The ecom dry run must produce exactly `25` `D|` rows and `0` lint warnings.
 
 ### PB-01, playbook-export v2
 
-**Status: DEFERRED, not cut.** `/Users/pmudh/Documents/GitHub/Atlanta/planning/delivery/00-scope.md` defers it, and this section does not overrule that. It is written here so the decision is visible rather than silent. It is the first item on the cut order and it is not counted in the 40.2 total.
+**Status: NOT BUILT in v1.0.** Decided 21 August 2026: `playbook-export` is rebuilt once the architecture is settled end to end. The skill and its command stay in the repository untouched at 0.1.0, so no count, table or validator check moves. This task body is kept for that rebuild. `/Users/pmudh/Documents/GitHub/Atlanta/planning/delivery/00-scope.md` defers it, and this section does not overrule that. It is written here so the decision is visible rather than silent. It is the first item on the cut order and it is not counted in the 44.95 total.
 **Effort if taken: 0.5d.**
 **Depends on: GP-01, AB-01, C-01, and whichever of C-03 and A-01 survive.**
 
@@ -1492,7 +1494,55 @@ validate.sh must report 0 FAILs and 0 WARNs about the command or skill count.
 
 ---
 
-## PHASE 7, docs (2.00d)
+## PHASE 7, docs (4.25d)
+
+> **Merged from section 04 on 21 August 2026.** Section 04 Part B defined `D-01` through `D-12`.
+> `D-01` to `D-04` are the four tasks already in this phase and they agree.
+> `D-05`, `D-08`, `D-09` and `D-12` duplicate work this document already counts as `G2-03`, `G-02`, `G-01` and `O-02`, so they add nothing and are recorded as absorbed.
+> `D-06`, `D-07`, `D-10` and `D-11` are genuinely new, total 2.25d, and are the four stubs at the end of this phase.
+> Full task bodies for all of them are in `/Users/pmudh/Documents/GitHub/Atlanta/planning/delivery/04-examples-and-docs.md`, Part B.
+
+### D-06, the day-to-day manual, `docs/USING-IT.md`
+
+**Status: NEW, merged from section 04 Part B. Effort: 1.10d** (1.0d plus 0.1d for the memory section section 08 adds).
+**Depends on:** all four systems built, because it documents them. **Blocks:** the 4 September onboarding email.
+
+This is the document a founder opens on a Tuesday in October. It covers regenerating one piece, regenerating the whole batch, the monthly refill, editing voice after generation, what happens to the CSV when the markdown is edited, how to undo, how to archive, what the toolkit remembers, and what must never be hand-edited because `ge` owns it.
+**This is client requirement 3 and until this task existed there was no task for it anywhere.**
+Full outline: `/Users/pmudh/Documents/GitHub/Atlanta/planning/delivery/04-examples-and-docs.md`, section B.5.
+
+**COMMIT** `D-06: write the day-to-day manual`
+
+### D-07, `docs/TROUBLESHOOTING.md`
+
+**Status: NEW, merged from section 04 Part B. Effort: 0.75d.**
+**Depends on:** `SS-01`, so the doctor's real output can be quoted rather than imagined.
+
+Full outline: `/Users/pmudh/Documents/GitHub/Atlanta/planning/delivery/04-examples-and-docs.md`, section B.6.
+
+**COMMIT** `D-07: write the troubleshooting guide`
+
+### D-10, the six screenshots, `docs/img/`
+
+**Status: NEW, merged from section 04 Part B. Effort: 0.25d. HUMAN, Philip.**
+**Depends on:** a GoHighLevel account with the settings screens reachable.
+**Blocks:** `D-02`, whose acceptance requires a screenshot slot per step, and `G2-01`, whose token walk references them.
+
+**COMMIT** `D-10: capture the six setup screenshots`
+
+### D-11, the asset readmes and the TODO gate
+
+**Status: NEW, merged from section 04 Part B. Effort: 0.25d.**
+**Depends on:** `O-01` for the three snapshot share links.
+
+Rewrites `plugins/growth-engine/assets/ghl/README.md` and `plugins/growth-engine/assets/forms/README.md` so no TODO remains, and turns the CI TODO gate hard. Sequencing is decision 6 in the plan index.
+
+**COMMIT** `D-11: fill the asset readmes and arm the TODO gate`
+
+---
+
+## PHASE 7 continues, the original four docs tasks
+
 
 ---
 
@@ -1733,6 +1783,30 @@ On the probe branch, the macos and windows jobs must both fail, and the failure 
 ---
 
 ## PHASE 9, the full-arc runs and the 1.0.0 freeze (3.50d)
+
+---
+
+### The examples harness, merged from section 04 Part A
+
+> Section 04 Part A defined `EX-01` to `EX-11`, total 5.10d. Six of them are genuinely new and are stubbed below, total 2.50d.
+> `EX-07`, `EX-08` and `EX-09` generate the three worked examples, which is the same work `X-01` already does, so they are the detailed procedure for `X-01` rather than additional tasks and add no days.
+> `EX-10` folds into `FB-02`, which already rewrites the examples README, at plus 0.10d.
+> `EX-06` was a rename that has already been applied by hand, so it is closed.
+> Full task bodies: `/Users/pmudh/Documents/GitHub/Atlanta/planning/delivery/04-examples-and-docs.md`, Part A.
+
+| Id | What | Effort | Status |
+|---|---|---|---|
+| `EX-01` | Extend `new-run.sh` to three routes and add the model dimension | 0.25d | NEW. Supersedes step 6 of `FB-02` |
+| `EX-02` | Write `import-example.sh`: the scrub gate, the copy, the manifest | 0.50d | NEW |
+| `EX-03` | Write `scripts/check-examples.sh` and wire it into `validate.sh` | 0.50d | NEW |
+| `EX-04` | Write the three `inputs/answers.md` answer scripts | 0.50d | NEW |
+| `EX-05` | Name and domain clearance for every invented entity | 0.25d | NEW. HUMAN, Philip |
+| `EX-11` | Full regeneration sweep before the mentor deadline of 1 September | 0.50d | NEW |
+| `EX-06` | Rename that has already been applied | 0.10d | CLOSED |
+| `EX-07` to `EX-09` | Generate the three examples end to end | 2.25d | ABSORBED by `X-01` |
+| `EX-10` | Rewrite the examples README | 0.25d | ABSORBED by `FB-02`, plus 0.10d |
+
+**Why the scrub gate matters.** `EX-02`'s import script is the thing that stops a run folder crossing from the private working folder into the public repository unread. Every example is generated in `/Users/pmudh/Downloads/Atlanta/launchhouse-atlanta/runs/`, and that boundary is the one place founder-shaped output could reach 130 people by accident.
 
 ---
 

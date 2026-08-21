@@ -51,7 +51,7 @@ Both exist in the repo today and both were sold. Neither is one of the four.
 
 **`skills/growth-plan` is IN.** The 90-day plan is the Sunday deliverable, the skill is small, and it reads the brain that is being built anyway. It currently has no task in the PRD and never reads the `track` field, so both tracks receive an identical plan. Section 02 adds a task for it.
 
-**`skills/playbook-export` is DEFERRED** unless someone decides otherwise. It compiles a personalised insert from files that are all changing shape. Compiling from a moving target before the target settles wastes the work. Revisit once the four systems are stable.
+**`skills/playbook-export` is NOT BUILT in v1.0.** Decided 21 August 2026: it is rebuilt once the architecture is settled end to end. The skill and the `/growth-engine:playbook` command stay in the repository untouched at 0.1.0, so the skill count, the command count, the README table and the validator are all unaffected. No task rewires it. It compiles a personalised insert from files that are all changing shape. Compiling from a moving target before the target settles wastes the work. Revisit once the four systems are stable.
 
 Say which of these applies wherever it matters. Do not silently drop either.
 

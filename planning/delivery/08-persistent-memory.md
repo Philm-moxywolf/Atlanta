@@ -269,7 +269,8 @@ These are amendments to tasks that already exist. Each is small and each is list
 `B-10` is 0.75 days.
 The amendments above are 0.25 days in total, because each is a small addition to a task that is already being written.
 
-**Total added: 1.0 day.** The revised build total moves from 39.2 to **40.2 dev-days**.
+**Total added: 1.0 day.** That moved the build total from 39.2 to 40.2 at the time this section was written.
+Section 04's registry was then merged into section 02 on 21 August, adding a further 4.75 days, so the current total is **44.95 dev-days**. Section 02's effort table is the one to trust.
 
 `B-10` is now cut position 5 of 9 in section 02's cut order, between the update-drill rehearsal and the status and gate folds.
 It is cuttable, unlike the rest of the brain: `B-00` to `B-09` stay on the never-cut list and `B-10` does not join them, because the four systems all still work without it.
