@@ -7,7 +7,7 @@ It replaces Part Three of `planning/PRD-growth-engine-v1.md` and overrides that 
 Everything else in the PRD still stands.
 
 **Read this page, then read the sections in order.**
-They are separate files because the whole plan runs to about 10,500 lines, and one file that long is worse to work in than eight that are each about one thing.
+They are separate files because the whole plan runs to about 10,813 lines, and one file that long is worse to work in than nine that are each about one thing.
 
 ## The sections
 
@@ -21,12 +21,15 @@ They are separate files because the whole plan runs to about 10,500 lines, and o
 | 05 | [delivery/05-routes-and-platforms.md](delivery/05-routes-and-platforms.md) | The coverage matrix, the operator path from clone to release, four founder walkthroughs, three route journeys, and a verifiable go-live checklist per route |
 | 06 | [delivery/06-code-standards.md](delivery/06-code-standards.md) | What "all the code is commented" means in enforceable terms. Header template, comment rules, the POSIX ban list with the portable idiom for each, error format, and how the validator checks it |
 | 07 | [delivery/07-quality-and-simplicity.md](delivery/07-quality-and-simplicity.md) | Simplifications worth taking, the risk register the PRD dropped, specified fallbacks, ranked day-of failures, the cut order, and the definition of done |
+| 08 | [delivery/08-persistent-memory.md](delivery/08-persistent-memory.md) | The persistent local memory each founder gets, ported from the Glitch vault model. The curated layer, managed blocks, the hold rule, CRLF handling, and task B-10 |
 
 ## The three numbers that matter
 
-**39.2 dev-days**, against 31.0 in the PRD as written.
+**40.2 dev-days**, against 31.0 in the PRD as written.
 
-The difference is not scope creep. Cutting the DM inbox saved 2.25 days. The other 10.45 are work the PRD already assumed had happened: the schema files it points at, the `ge` subcommands two of its own state files need, the four command routers it declares twice and never builds, the approve step its publish precondition depends on, the two orphan skills that write founder files with no snapshot, and one end-to-end run of a twelve-skill chain that until now was first exercised by 130 founders on the day.
+That is 39.2 for the build in section 02, plus 1.0 for the persistent memory layer in section 08.
+
+The difference is not scope creep. Cutting the DM inbox saved 2.25 days. Of the rest, 1.0 is the memory layer added on 20 August after reviewing the Glitch brain, and 10.45 are work the PRD already assumed had happened: the schema files it points at, the `ge` subcommands two of its own state files need, the four command routers it declares twice and never builds, the approve step its publish precondition depends on, the two orphan skills that write founder files with no snapshot, and one end-to-end run of a twelve-skill chain that until now was first exercised by 130 founders on the day.
 
 **7.45 days are recoverable** through the cut order in section 02, which names what goes first and why each is safe.
 

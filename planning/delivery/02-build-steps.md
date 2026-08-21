@@ -74,10 +74,12 @@ It does not look at `REPO/planning/`, so nothing in that folder is style-checked
 | Less the DM inbox cut (S-04 0.25, B-07 0.5, G2-02 1.5) | **minus 2.25** |
 | PRD baseline after the cut | 28.75 |
 | Plus the work the gap register proved was never priced | **plus 10.45** |
-| **Revised total** | **39.20 dev-days** |
+| Subtotal, section 02 | 39.20 |
+| Plus the persistent memory layer, section 08 (B-10 plus its amendments) | **plus 1.00** |
+| **Revised total** | **40.20 dev-days** |
 
 Plus roughly 3.5 days of Philip's own time on the ⚑HUMAN tasks (S-01, S-02, S-03, S-05, S-06, S-07, O-01, and the clean-machine half of R-01).
-That time runs alongside the executor's, it does not add to the 39.2.
+That time runs alongside the executor's, it does not add to the 40.2.
 
 The 10.45 added days are not scope creep.
 They are work the PRD already assumed had happened: the schema files it points at, the `ge` subcommands two of its own state files need, the four command routers it declares twice and never builds, the approve step its publish precondition depends on, the two orphan skills that write founder files with no snapshot, and one end-to-end run of a twelve-skill chain that until now was first exercised by 130 founders on 25 September.
@@ -88,12 +90,12 @@ The founder still reads and replies to DMs. They do it in the GoHighLevel app, a
 
 ---
 
-### The cut order, if 39.2 does not fit
+### The cut order, if 40.2 does not fit
 
 Cut in this order, top first.
 Each line names what is lost and why the loss is survivable.
 Stop as soon as the number fits.
-Cuts 7 and 8 remove something that was sold, so neither happens without Philip saying yes in writing.
+Cuts 8 and 9 remove something that was sold, so neither happens without Philip saying yes in writing.
 
 | # | Cut | Recovers | Why it is safe |
 |---|---|---|---|
@@ -101,10 +103,11 @@ Cuts 7 and 8 remove something that was sold, so neither happens without Philip s
 | 2 | **X-01 route 3** (the b2c-ecom full-arc run) | 0.70d | Ecom is the smallest slice of the cohort. The b2b and b2c-service runs still exercise every join between every skill. Cost: the `b2c-ecom-core` copy map reaches the 23 September clinic without an end-to-end run behind it |
 | 3 | **D-04** doc reflow and trigger sync | 0.25d | Cosmetic. `scripts/validate.sh` already blocks banned dashes and banned words, so the founder-visible quality bar holds without it. Slips to lane 1.1 |
 | 4 | **SS-02's rehearsed drill** (keep the mechanism, drop the rehearsal) | 0.50d | The Cowork Plugins Update button is a one-click vendor path. Replace the rehearsal with a written fallback in the Session 3 run sheet and a Slack message |
-| 5 | **A-02** status and gate folds | 0.50d | `status` keeps reporting file presence, which is what founders see today and what the 0.1.0 skill already does. Cost: gate answers stay file-shaped instead of ledger-shaped |
-| 6 | **SS-03** reconnect flows | 1.00d | Replace with one page in `REPO/docs/CONNECTIONS.md` plus the Slack escape hatch. A Private Integration Token created at Session 2 is 11 to 13 days old at the event, well inside its life, so a 401 is rare. The doctor still names the failure |
-| 7 | **C-03** publish through the GHL MCP | 2.00d | CSV bulk upload becomes the only publishing path. The CSV header is pinned to the real GHL template by C-02, and GHL's own importer is a supported product feature. Cost: the read-back verification promise goes, and system 1 loses its headline. **Requires Philip's yes** |
-| 8 | **A-01** Apollo MCP flow | 2.00d | The manual export route becomes primary for every B2B founder, not just the Microsoft 365 ones. It is safe only because A-01 already builds and documents that route as first-class. Cost: no `{{first_line}}` write-back, no paused-enrollment proof, more founder clicking. **Requires Philip's yes** |
+| 5 | **B-10** the curated memory layer | 1.00d | The four systems all still work. What is lost is that the toolkit stops remembering between sessions: angles can repeat on refill, and a founder returning in December starts from the Brain alone. Cut this before anything that stops a founder shipping, and after anything merely cosmetic. **The rest of the brain, B-00 to B-09, is never cut** |
+| 6 | **A-02** status and gate folds | 0.50d | `status` keeps reporting file presence, which is what founders see today and what the 0.1.0 skill already does. Cost: gate answers stay file-shaped instead of ledger-shaped |
+| 7 | **SS-03** reconnect flows | 1.00d | Replace with one page in `REPO/docs/CONNECTIONS.md` plus the Slack escape hatch. A Private Integration Token created at Session 2 is 11 to 13 days old at the event, well inside its life, so a 401 is rare. The doctor still names the failure |
+| 8 | **C-03** publish through the GHL MCP | 2.00d | CSV bulk upload becomes the only publishing path. The CSV header is pinned to the real GHL template by C-02, and GHL's own importer is a supported product feature. Cost: the read-back verification promise goes, and system 1 loses its headline. **Requires Philip's yes** |
+| 9 | **A-01** Apollo MCP flow | 2.00d | The manual export route becomes primary for every B2B founder, not just the Microsoft 365 ones. It is safe only because A-01 already builds and documents that route as first-class. Cost: no `{{first_line}}` write-back, no paused-enrollment proof, more founder clicking. **Requires Philip's yes** |
 
 Total recoverable: **7.45 dev-days**.
 
@@ -562,6 +565,8 @@ Every subcommand prints evidence, returns a meaningful exit code, and ends every
 
 ### B-00, write the seven schema files
 
+> **Amended by section 08.** See `/Users/pmudh/Documents/GitHub/Atlanta/planning/delivery/08-persistent-memory.md`: an eighth schema file, `schemas/memory.md`, and the acceptance count moves from 7 to 8.
+
 **Status: NEW.** The PRD declares `schemas/` in three places and consumes it in two, and creates exactly one file inside it, `gates.md`, and then only as a side clause in B-06. The ledger header the PRD ships in its own sample output says `Format: schemas/ledger.md`, which is a dangling pointer written into 130 founders' folders. CI-01 adds a check against a directory that is four-fifths absent.
 **Effort: 0.75d.**
 **Depends on: T-00, G-02.**
@@ -651,6 +656,8 @@ The bashism count must be `0`, and the non-`#!/bin/sh` shebang count must be `0`
 ---
 
 ### B-02, ge init
+
+> **Amended by section 08.** See `/Users/pmudh/Documents/GitHub/Atlanta/planning/delivery/08-persistent-memory.md`: `ge init` also seeds `growth-engine/memory.md` with its six managed blocks present and empty.
 
 **Status: KEEP AS IS.**
 **Effort: 0.5d.**
@@ -812,6 +819,8 @@ The ledger snapshot count must be 5 or more.
 
 ### B-06, ge index and ge lint
 
+> **Amended by section 08.** See `/Users/pmudh/Documents/GitHub/Atlanta/planning/delivery/08-persistent-memory.md`: `ge lint` also warns on the memory budget and reports any managed block whose start marker has no matching end marker.
+
 **Status: AMENDED.** The `gates.md` clause moves out to B-00, and two lint checks are added that make the approve transition enforceable rather than decorative.
 **Effort: 1.0d** (0.75d as in the PRD, plus 0.25d for the divergence checks).
 **Depends on: B-05, B-00.**
@@ -881,6 +890,8 @@ The reference count must be `0` outside this delivery plan and the superseded PR
 ---
 
 ### B-08, ge context and ge check
+
+> **Amended by section 08.** See `/Users/pmudh/Documents/GitHub/Atlanta/planning/delivery/08-persistent-memory.md`: `ge context` also reads `memory.md` and carries the newest decision and the newest open thread, inside the existing fifteen-line ceiling rather than beyond it.
 
 **Status: AMENDED.** The PIT-age leg now reads the schema'd field defined in B-00 and written by B-09, instead of parsing prose. The log-integrity leg now has a watermark to compare against, written by B-04.
 **Effort: 1.0d.**
@@ -964,6 +975,18 @@ Both refusal runs must print `exit=1` with a recovery line.
 The final count must be `0`, proving no file in the folder contains a token-shaped string.
 
 **COMMIT:** `B-09: ge receipt and ge accounts, one writer for the last two state files`
+
+---
+
+### B-10, ge remember, the curated memory layer
+
+**Status: NEW, specified in full in section 08.**
+The task body, the numbered steps, the runnable acceptance block and the commit line are at `/Users/pmudh/Documents/GitHub/Atlanta/planning/delivery/08-persistent-memory.md`.
+
+**Effort: 0.75d.** **Depends on:** `B-00`, `B-03`, `B-04`, `B-05`. **Blocks:** the amended `B-08` and `C-01`.
+
+It adds `growth-engine/memory.md`, the curated layer that persists what the toolkit learns about a founder across sessions, together with the managed-block mechanism that lets `ge` write inside a file the founder also edits, and the hold rule that refuses an edit whose anchor text has moved.
+Ported from the Glitch vault model at `/Users/pmudh/Documents/GitHub/glitch`.
 
 ---
 
@@ -1073,6 +1096,8 @@ validate.sh must report 0 FAILs.
 ---
 
 ### C-01, content-engine rewire, captions, and the approve step
+
+> **Amended by section 08.** See `/Users/pmudh/Documents/GitHub/Atlanta/planning/delivery/08-persistent-memory.md`: refill mode also reads the `angles` block in `memory.md` and refuses an angle already listed there.
 
 **Status: AMENDED.** Three additions. The ecom pillar variant is taken unchanged from the PRD's own C-01 delta: pillar 3, transformation, becomes product-led outcome, leaning on user-generated content and social proof. The approve step is new and closes a blocker: nothing anywhere set a ledger row to `approved`, so C-03's precondition could never be met on any machine. The caption rule is new and closes a verified high: 23 of a B2C founder's 30 pieces are video scripts and carousels, and the media lane classifies them and never gives them publishable text, so once the founder has shot the video there is still nothing to post with it.
 **Effort: 2.0d** (1.5d as in the PRD, plus 0.5d for captions and the approve step).
@@ -1301,7 +1326,7 @@ The ecom dry run must produce exactly `25` `D|` rows and `0` lint warnings.
 
 ### PB-01, playbook-export v2
 
-**Status: DEFERRED, not cut.** `/Users/pmudh/Documents/GitHub/Atlanta/planning/delivery/00-scope.md` defers it, and this section does not overrule that. It is written here so the decision is visible rather than silent. It is the first item on the cut order and it is not counted in the 39.2 total.
+**Status: DEFERRED, not cut.** `/Users/pmudh/Documents/GitHub/Atlanta/planning/delivery/00-scope.md` defers it, and this section does not overrule that. It is written here so the decision is visible rather than silent. It is the first item on the cut order and it is not counted in the 40.2 total.
 **Effort if taken: 0.5d.**
 **Depends on: GP-01, AB-01, C-01, and whichever of C-03 and A-01 survive.**
 
@@ -1347,6 +1372,8 @@ The machine-file count inside the produced insert must be `0`.
 ---
 
 ### SS-01, doctor v2
+
+> **Amended by section 08.** See `/Users/pmudh/Documents/GitHub/Atlanta/planning/delivery/08-persistent-memory.md`: the doctor gains one line for memory: present, block integrity intact, entry count against budget.
 
 **Status: AMENDED.** The dm-inbox leg is removed. The Apollo leg becomes conditional on track, so a B2C founder is not shown a failing Apollo check for a system they do not use.
 **Effort: 1.0d.**
