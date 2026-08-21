@@ -57,9 +57,9 @@ That leaves the Private Integration Token needing exactly these seven scopes:
 | # | Decision | Answer |
 |---|---|---|
 | 1 | Scope under the lane pressure | **Build it all. No cutting scope.** The cut order in section 02 stays written as a record of what would go first, but it is not to be used |
-| 2 | Merge section 04's registry into section 02's | **Yes.** In progress |
+| 2 | Merge section 04's registry into section 02's | **Done.** 4.75 days of genuinely new work moved into section 02, the rest recorded as absorbed |
 | 3 | Which GoHighLevel tier founders buy | **The 97 dollar Starter tier.** Named in the founder docs and the cost table |
-| 5 | `playbook-export` | **Remove it, and rebuild it once the architecture is settled end to end.** It is not part of v1.0 |
+| 5 | `playbook-export` | **Not built in v1.0, rebuilt once the architecture is settled end to end.** The skill and its command stay in the repository untouched at 0.1.0, so no count, table or check moves |
 | 7 | Push | **After the remaining repairs**, not before |
 
 ### Consequence of decision 1 that is not yet resolved
@@ -77,9 +77,6 @@ Two: that the comment-to-DM trigger and inbound Instagram capture work there, be
 If either sits above Starter, the tier decision or the B2C ops design has to move, and that is better known in August than in September.
 
 ## Still open
-
-| # | Decision | Why it cannot wait indefinitely |
-|---|---|---|
 
 | # | Decision | Why it cannot wait indefinitely |
 |---|---|---|
