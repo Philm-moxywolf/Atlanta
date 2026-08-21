@@ -9,14 +9,14 @@ If an item adds work, the section states what it buys back and the buy-back has 
 Items that only add rigour, with no named thing they prevent, are not here.
 
 **What is being delivered, restated so this section stands alone.**
-The client locked the scope to exactly four systems on 21 August 2026.
+The client locked the scope to exactly four systems on 20 August 2026.
 
 1. Content engine: 30 on-voice pieces, tracked in a ledger, exported to CSV, scheduled into the GoHighLevel Social Planner through the official GoHighLevel MCP with read-back verification.
 2. Outbound engine. B2B: Apollo MCP, from an ICP to a live search to 35 built to 25 cut to enriched to contacts to a sequence carrying a `{{first_line}}` merge field, enrolled paused. Founders on Microsoft 365 take a first-class manual route instead. B2C: 25 direct message openers sent by hand, a hook bank, and offer tests.
 3. Back-end ops: three GoHighLevel snapshots (`b2b-core`, `b2c-service-core`, `b2c-ecom-core`), selected automatically by track plus business model, with every message stored as a namespaced custom value. This includes comment-to-DM capture and DM qualify-and-book, which run as GoHighLevel workflows carrying copy that Claude writes.
-4. The brain: `bin/ge`, POSIX sh, schema-described state, one writer per file, snapshot-before-write with undo, an append-only ops log, a derived index and an evidence doctor.
+4. The brain: `bin/ge`, POSIX sh, schema-described state, one writer per file, snapshot-before-write with undo, an append-only ops log, a derived index and an evidence doctor. The one exception is a managed block: inside a file carrying `GE:<NAME>:START` and `END` markers, `ge` owns the marked blocks and the founder owns everything outside them, which is how `memory.md` stays both machine-written and hand-editable. See section 08.
 
-**What was cut on 21 August 2026, restated so nothing below is read as still coming.**
+**What was cut on 20 August 2026, restated so nothing below is read as still coming.**
 The `dm-inbox` skill is cut: Claude never reads a founder inbox and never drafts a direct message reply.
 `ge dmgate` (PRD task B-07) and all 24-hour-window code are cut: nothing in our code sends a direct message.
 `commands/inbox.md` is cut.
@@ -936,6 +936,9 @@ There is no separate `content-run.md`; task X-01 produces the arc transcripts an
 47. No founder-facing file offers automated cold direct messages. Check: validate.sh's DM line produces no warning, and each match refuses rather than offers.
 48. Every cold email touch in the generated sequence carries an opt-out line and a sender identification with a real business name and postal address. Check: the two full-arc run folders.
 49. Neither worked example contains an invented number, customer or result. Check: read both `founder-brain.md` files and both content files, and confirm every number traces to something the fictional founder was given in the intake.
+50. `ge init` seeds `growth-engine/memory.md` with all six managed blocks present and empty. Check: run `ge init` in a fresh directory and confirm `grep -c 'GE:.*:START' growth-engine/memory.md` returns 6.
+51. A memory entry survives the founder editing the same file. Check: append a line under `## Notes`, run `ge remember worked "x"`, and confirm the founder's line is still present byte-for-byte.
+52. A half-marked memory file is refused rather than guessed at. Check: delete one `GE:*:END` marker, run `ge remember` against that block, and confirm it exits 1, writes nothing, and prints a recovery line.
 50. `docs/CONNECTIONS.md` exists and every claim in it maps to a mechanism that was actually built. Check: the commit body lists the mapping, claim by claim.
 51. The seven Private Integration Token scopes are stated identically everywhere they appear, and the list is exactly: `socialplanner/post.readonly`, `socialplanner/post.write`, `socialplanner/account.readonly`, `socialplanner/statistics.readonly`, `contacts.readonly`, `contacts.write`, `locations.readonly`. Check, run from `/Users/pmudh/Documents/GitHub/Atlanta`:
 

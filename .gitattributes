@@ -13,3 +13,8 @@
 # renormalised into a large noisy diff.
 *.sh text eol=lf
 plugins/growth-engine/bin/ge text eol=lf
+
+# The Social Planner CSV fixture is compared byte for byte against generated
+# output by two tasks. A CRLF checkout on Windows would fail that comparison
+# for a reason that has nothing to do with the content being wrong.
+*.csv text eol=lf

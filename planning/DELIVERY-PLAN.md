@@ -31,7 +31,7 @@ That is 39.2 for the build in section 02, plus 1.0 for the persistent memory lay
 
 The difference is not scope creep. Cutting the DM inbox saved 2.25 days. Of the rest, 1.0 is the memory layer added on 20 August after reviewing the Glitch brain, and 10.45 are work the PRD already assumed had happened: the schema files it points at, the `ge` subcommands two of its own state files need, the four command routers it declares twice and never builds, the approve step its publish precondition depends on, the two orphan skills that write founder files with no snapshot, and one end-to-end run of a twelve-skill chain that until now was first exercised by 130 founders on the day.
 
-**7.45 days are recoverable** through the cut order in section 02, which names what goes first and why each is safe.
+**8.45 days are recoverable** through the cut order in section 02, which names what goes first and why each is safe.
 
 **About 3.5 days of that is not the executor's**, it is account setup, vendor UI work and clean-machine time. It runs alongside rather than adding.
 
@@ -52,7 +52,7 @@ That leaves the Private Integration Token needing exactly these seven scopes:
 2. Run task `T-00` in section 02: triage the 95 verified findings in `/Users/pmudh/Downloads/Atlanta/launchhouse-atlanta/planning/FUNCTIONAL-REVIEW.md`. Half a day, and it stops the rest being rediscovered one at a time.
 3. Do the spike, `S-01` through `S-07` minus the cut `S-04`. It is almost all Philip's, and nothing downstream may invent an API field, header, tool name or CSV column that is not in `planning/spike-findings.md` with pasted evidence.
 
-## Six decisions this plan needs and cannot make for you
+## Seven decisions this plan needs and cannot make for you
 
 Each is flagged in place. None blocks starting.
 
@@ -63,7 +63,27 @@ Each is flagged in place. None blocks starting.
 | 3 | **`X-01`, the full-arc run.** It sits in lane 1.0 but depends on lane 1.1 skills. Section 02 splits it into `X-01a` and `X-01b` at the same total | It changes when the finished example folders exist for the mentors |
 | 4 | **`docs/CONNECTIONS.md` in the README.** `D-01` links it in lane 1.0; `G2-03` writes it in lane 1.1. Either move the link or ship a stub | 130 founders receive that README, and a dead link is a founder-visible defect |
 | 5 | **`playbook-export`.** Deferred by section 00, with a full task body written in case it is taken | It compiles from files that are still changing shape |
+| 7 | **Merge section 04's registry into section 02's.** `EX-01..11` and `D-05..12` are real work, 11.1 days gross, sitting outside the headline number. Four are duplicates to collapse | `docs/USING-IT.md` and `docs/TROUBLESHOOTING.md` live in there, and without them a founder has no manual. Do this before task one |
 | 6 | **When the TODO gate turns hard.** Promoting it to a failure before task `O-01` lands the three share links will fail the build immediately | It is the check that stops placeholder links reaching founders |
+
+## Two numbering schemes, and what each governs
+
+The plan uses more than one id series. They are not interchangeable, and mistaking one for another is how work gets skipped.
+
+| Prefix | Meaning | Defined in | Counted in the 40.2? |
+|---|---|---|---|
+| `T-`, `S-`, `G-`, `B-`, `FB-`, `C-`, `GP-`, `AB-`, `PB-`, `SS-`, `CMD-`, `D-01..04`, `CI-`, `X-`, `R-`, `G2-`, `A-`, `O-` | Build tasks | Section 02, and `B-10` in section 08 | **Yes** |
+| `EX-01..11` | Example-generation tasks | Section 04 Part A | **No, see below** |
+| `D-05..12` | Documentation tasks | Section 04 Part B | **No, see below** |
+| `CK-01..31` | Validator checks that exist today | Section 03, local reference only | Not tasks |
+| `V-01` upward | Validator checks this plan adds | Section 03, local reference only | Not tasks |
+
+**Section 04 carries its own task registry, and it is not inside the 40.2.**
+Part A totals 5.1 days and Part B totals 6.0 days, so 11.1 days in all.
+Four of those absorb tasks section 02 already counts: `D-05` absorbs `G2-03`, `D-08` absorbs `G-02`, `D-09` absorbs `G-01`, and `D-12` absorbs `O-02`.
+The remainder is genuinely additional work, and it includes `D-06`, the day-to-day manual at `docs/USING-IT.md`, and `D-07`, `docs/TROUBLESHOOTING.md`.
+
+Those two are how a founder learns to replace content, regenerate a batch, run the monthly refill and undo a mistake. Neither has a task in section 02. **So the honest headline is 40.2 for the build plus the unabsorbed remainder of section 04, and reconciling the two registries into one is the first thing to do before execution starts.** It is listed as decision 7 below.
 
 ## The rules that govern the work
 

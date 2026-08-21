@@ -74,9 +74,13 @@ It does not look at `REPO/planning/`, so nothing in that folder is style-checked
 | Less the DM inbox cut (S-04 0.25, B-07 0.5, G2-02 1.5) | **minus 2.25** |
 | PRD baseline after the cut | 28.75 |
 | Plus the work the gap register proved was never priced | **plus 10.45** |
-| Subtotal, section 02 | 39.20 |
-| Plus the persistent memory layer, section 08 (B-10 plus its amendments) | **plus 1.00** |
+| Subtotal, every task below EXCEPT B-10 | 39.20 |
+| `B-10`, the memory layer (the task stub is printed below, in Phase 2) | plus 0.75 |
+| The amendments B-10 makes to B-00, B-02, B-06, B-08, C-01 and SS-01 | plus 0.25 |
 | **Revised total** | **40.20 dev-days** |
+
+Re-summing the task headings below gives 39.95, not 39.20, because `B-10` is printed in Phase 2 and carries its own 0.75.
+The first row deliberately excludes it so the three added rows do not double-count. Full detail for `B-10` is in section 08.
 
 Plus roughly 3.5 days of Philip's own time on the ⚑HUMAN tasks (S-01, S-02, S-03, S-05, S-06, S-07, O-01, and the clean-machine half of R-01).
 That time runs alongside the executor's, it does not add to the 40.2.
@@ -109,7 +113,7 @@ Cuts 8 and 9 remove something that was sold, so neither happens without Philip s
 | 8 | **C-03** publish through the GHL MCP | 2.00d | CSV bulk upload becomes the only publishing path. The CSV header is pinned to the real GHL template by C-02, and GHL's own importer is a supported product feature. Cost: the read-back verification promise goes, and system 1 loses its headline. **Requires Philip's yes** |
 | 9 | **A-01** Apollo MCP flow | 2.00d | The manual export route becomes primary for every B2B founder, not just the Microsoft 365 ones. It is safe only because A-01 already builds and documents that route as first-class. Cost: no `{{first_line}}` write-back, no paused-enrollment proof, more founder clicking. **Requires Philip's yes** |
 
-Total recoverable: **7.45 dev-days**.
+Total recoverable: **8.45 dev-days**.
 
 **Never cut, at any pressure:** T-00, B-00 through B-09 (the brain and its schemas), CI-02's Windows Home leg, and X-01's b2b run.
 Those are the difference between a product that founders can maintain themselves and a demo that breaks on 26 September with a one-day fix window.
@@ -563,7 +567,7 @@ Every subcommand prints evidence, returns a meaningful exit code, and ends every
 
 ---
 
-### B-00, write the seven schema files
+### B-00, write the eight schema files
 
 > **Amended by section 08.** See `/Users/pmudh/Documents/GitHub/Atlanta/planning/delivery/08-persistent-memory.md`: an eighth schema file, `schemas/memory.md`, and the acceptance count moves from 7 to 8.
 
@@ -573,7 +577,7 @@ Every subcommand prints evidence, returns a meaningful exit code, and ends every
 
 **What to do**
 
-Create seven files under `REPO/plugins/growth-engine/schemas/`. Each one has the same five sections: what the file is for, who the single writer is, the exact line format, a valid example block, and an invalid example block with one sentence saying what is wrong with it.
+Create eight files under `REPO/plugins/growth-engine/schemas/`. Each one has the same five sections: what the file is for, who the single writer is, the exact line format, a valid example block, and an invalid example block with one sentence saying what is wrong with it.
 
 1. `schemas/brain.md` : the founder-brain.md section list, the `Track` enum (`b2b|b2c`), the `Model` enum (`service|ecommerce`, B2C only), the `Locked` date format, the Numbers block FB-01 adds, and the `## Invocation` heading holding the one `ge` invocation string from S-06 gate B2, and the `## Credentials` heading holding the G-03 variant decision.
 2. `schemas/ledger.md` : the row formats, all three of them.
@@ -1750,18 +1754,18 @@ The 2.0d total does not change. Only its placement does. Both halves write into 
 
    ```sh
    bash /Users/pmudh/Downloads/Atlanta/launchhouse-atlanta/scripts/new-run.sh b2b arc
-   bash /Users/pmudh/Downloads/Atlanta/launchhouse-atlanta/scripts/new-run.sh b2c arc
+   bash /Users/pmudh/Downloads/Atlanta/launchhouse-atlanta/scripts/new-run.sh b2c-service arc
    bash /Users/pmudh/Downloads/Atlanta/launchhouse-atlanta/scripts/new-run.sh b2c-ecom arc
    ```
 
    That produces exactly these three folders:
    - `/Users/pmudh/Downloads/Atlanta/launchhouse-atlanta/runs/b2b-arc` : Sam Okoye, construction operations, B2B.
-   - `/Users/pmudh/Downloads/Atlanta/launchhouse-atlanta/runs/b2c-arc` : Priya Raman, skincare consultations, B2C service.
-   - `/Users/pmudh/Downloads/Atlanta/launchhouse-atlanta/runs/b2c-ecom-arc` : the fictional ecommerce founder FB-02 created, B2C ecommerce.
+   - `/Users/pmudh/Downloads/Atlanta/launchhouse-atlanta/runs/b2c-service-arc` : Cara Whitfield of Bright Hound, dog behaviour and training, B2C service. This is the founder `FB-02` creates.
+   - `/Users/pmudh/Downloads/Atlanta/launchhouse-atlanta/runs/b2c-ecom-arc` : Priya Raman of Lumen Skin, B2C ecommerce. She sells three products through a website, so she is the ecommerce example, not the service one.
 
 2. Open Claude Code in each folder in turn and run every command in the order a founder meets them, from a cold folder. Namespaced form only, because a bare command name never resolves: `/growth-engine:setup`, `/growth-engine:brain`, `/growth-engine:content`, then say "approve my content", then `/growth-engine:connect` and `/growth-engine:publish` if C-03 survived the cut order, then `/growth-engine:engine2`, then `/growth-engine:ops`, then `/growth-engine:plan`, and `/growth-engine:status` and `/growth-engine:gate` at each gate point.
 3. Record every friction in `REPO/planning/rehearsals/arc-b2b.md`, `REPO/planning/rehearsals/arc-b2c-service.md` and `REPO/planning/rehearsals/arc-b2c-ecom.md`: what you typed, what came back, what was wrong. One file per route, named exactly as listed. Every friction becomes either a documentation fix or a task, and neither is optional.
-4. Copy the finished `growth-engine/` contents from each run into `REPO/plugins/growth-engine/assets/examples/b2b-northfield/`, `REPO/plugins/growth-engine/assets/examples/b2c-lumen/` and the ecommerce example folder FB-02 created, so the examples are generated output rather than hand-written prose, and so the mentors review what founders will actually get. Read every file before it crosses from the run folder into REPO. The run folders live under PRIVATE, REPO is public, and nothing crosses that boundary unread. Do not copy `.state/`, `ledger.md` or `ops-log.md`: they are machine files and the examples are for reading.
+4. Copy the finished `growth-engine/` contents from each run into `REPO/plugins/growth-engine/assets/examples/b2b-northfield/`, `REPO/plugins/growth-engine/assets/examples/b2c-lumen/` and `REPO/plugins/growth-engine/assets/examples/b2c-service-brighthound/`, so the examples are generated output rather than hand-written prose, and so the mentors review what founders will actually get. Read every file before it crosses from the run folder into REPO. The run folders live under PRIVATE, REPO is public, and nothing crosses that boundary unread. Do not copy `.state/`, `ledger.md` or `ops-log.md`: they are machine files and the examples are for reading.
 5. Fictional only. No real business, no real person, no real customer, no real number. Never invent proof inside the runs either: where a fictional founder's proof is thin, the output must say so in Flags, and if it does not, that is a skill defect and it goes on the list.
 6. Run `ge check` and `ge lint` at the end of each arc and paste the output into the rehearsal file. Both must be clean.
 
@@ -1770,7 +1774,7 @@ The 2.0d total does not change. Only its placement does. Both halves write into 
 ```sh
 GE=/Users/pmudh/Documents/GitHub/Atlanta/plugins/growth-engine/scripts/ge.sh
 RUNS=/Users/pmudh/Downloads/Atlanta/launchhouse-atlanta/runs
-for r in b2b-arc b2c-arc b2c-ecom-arc; do
+for r in b2b-arc b2c-service-arc b2c-ecom-arc; do
   printf '=== %s\n' "$r"
   ls "$RUNS/$r/growth-engine/"
   ( cd "$RUNS/$r" && sh $GE check | grep -c 'FAIL' )

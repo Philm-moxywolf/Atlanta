@@ -72,7 +72,7 @@ Paths are relative to `/Users/pmudh/Documents/GitHub/Atlanta`.
 Scope notes that belong here so nobody has to hunt for them, and so nobody writes a script for something that was cut.
 
 **What is cut, and therefore has no class and no file.**
-The client locked scope on 21 August 2026, and the following are cut.
+The client locked scope on 20 August 2026, and the following are cut.
 Where the PRD at `planning/PRD-growth-engine-v1.md` still describes them, the PRD is out of date and this section overrides it.
 
 - The `dm-inbox` skill is cut. Claude never reads the founder's inbox and never drafts DM replies. No skill directory named `dm-inbox` is created under `plugins/growth-engine/skills/`.
@@ -686,7 +686,7 @@ Two worked examples follow. Their status in the repository today differs, and th
 
 The first scar is **already fixed in the repository**. `/Users/pmudh/Documents/GitHub/Atlanta/.gitignore` carries `/growth-engine/` with the leading slash, and already carries a plain-English comment explaining why. `scripts/validate.sh` re-proves it in its Hygiene section, at lines 277 to 284, which fails on an unanchored `growth-engine/` and passes on the anchored form. When that comment is next touched, add the `# SCAR:` tag and the date so a grep finds it.
 
-The second scar is **not yet fixed**. `/Users/pmudh/Documents/GitHub/Atlanta/.gitattributes` contains only a comment line and `* text=auto`. It does not carry `*.sh text eol=lf` or `bin/ge text eol=lf`. The example below is written as the comment to add at the moment the fix lands, which section 7 requires to be the same commit as the first shell script.
+The second scar was **fixed on 20 August 2026**. `/Users/pmudh/Documents/GitHub/Atlanta/.gitattributes` now carries `*.sh text eol=lf` and `plugins/growth-engine/bin/ge text eol=lf` beneath the original `* text=auto`, with the reasoning in a comment above them. Verify it with `git check-attr text eol -- scripts/validate.sh`, which must print `text: set` and `eol: lf`. The pin is scoped to shell entry points rather than applied as a blanket `* text=auto eol=lf`, because a blanket rule renormalises an entire working tree into one large noisy diff. The example below is the comment that shipped.
 
 ```sh
 # SCAR: on 2026-08-18 the .gitignore pattern "growth-engine/" was unanchored and
@@ -906,6 +906,7 @@ ge check
 Rules:
 - No abbreviated subcommands and no aliases. One name per operation. Two names means two things to document and two things a founder can get wrong.
 - No flags where a subcommand is clearer. `ge undo` rather than `ge restore --latest`.
+- The dispatcher's subcommands, as at the locked scope: `init`, `snapshot`, `restore`, `undo`, `log`, `ledger`, `index`, `lint`, `context`, `check`, `receipt`, `accounts`, `remember`. `ge remember` is the memory layer added on 20 August and is specified in section 08.
 - Compound sub-subcommands are hyphenated and lower case: `add-content`, not `addContent` or `add_content`.
 - Every subcommand prints evidence of what it did on success, not just silence, except `ge context --hook` which is silent by design.
 
@@ -986,7 +987,7 @@ The test column is what you actually run to prove compliance.
 | `head -n -N`, `tail -n -N` with a negative count | GNU extension. BSD `head` rejects it. | Count the lines first with `wc -l`, compute the positive number, then use `head -n "$n"`. `tail -n +N` (plus sign) is POSIX and is fine. | Grep for `-n -` |
 | `find -printf`, `find -maxdepth` beyond POSIX | `-printf` is GNU only. `-maxdepth` is widely present but not POSIX; it is permitted with a `# POSIX:` comment noting the exception, because every target we support has it. | `find ... -exec` or `find ... | while read`. Note filenames with spaces: the founder's folder is under "My Documents" on Windows. | `checkbashisms`; a test fixture with a space in the path |
 | `mktemp` with no template | BSD and GNU differ on defaults and on `-t`. | `mktemp "${TMPDIR:-/tmp}/ge.XXXXXX"` with an explicit template, and a `trap 'rm -f "$scratch"' EXIT INT TERM` on the next line. | Run on macOS and on Git Bash |
-| CRLF line endings in any `.sh` file or `bin/ge` | Git Bash executes `#!/bin/sh\r` and reports `bad interpreter: /bin/sh^M`, which a founder reads as a broken install. The repo's `.gitattributes` currently says only `* text=auto`, which does not prevent this on a Windows checkout with `core.autocrlf=true`. | Add to `.gitattributes`, in the same commit as the first script: `*.sh text eol=lf` and `bin/ge text eol=lf`. Section 8.1 also checks the working tree. | `grep -lU $'\r' ` over the script set; the CI Windows runner |
+| CRLF line endings in any `.sh` file or `bin/ge` | Git Bash executes `#!/bin/sh\r` and reports `bad interpreter: /bin/sh^M`, which a founder reads as a broken install. Fixed on 20 August 2026: `.gitattributes` now pins `*.sh` and `plugins/growth-engine/bin/ge` to `eol=lf`, confirmed with `git check-attr`. | Already applied. Keep the pin, and note the pattern for `bin/ge` must carry its full path, because a pattern containing a slash is anchored to the directory holding the `.gitattributes` file. Section 8.1 also checks the working tree. | `grep -lU $'\r' ` over the script set; the CI Windows runner |
 | Missing exec bit on `bin/ge` | Git records mode 100755 or 100644. A file committed at 644 is not executable on macOS or Linux, and the PATH entry silently does nothing. | `git update-index --chmod=+x plugins/growth-engine/bin/ge` | `git ls-files -s` mode check in section 8.1 |
 | `set -e` | Not banned by POSIX, banned by us. Its behaviour inside functions, inside `&&` chains and around command substitution differs enough between dash, macOS sh and Git Bash that code relying on it is not portable in practice. | Handle each failure explicitly: `if ! cmd; then ...; fi`, or `cmd || { message; exit 1; }`. Comment the omission once in `ge.sh` with a `# POSIX:` tag. | Human review |
 | `set -o pipefail` | Not POSIX. | Restructure so the failing stage is the last one, or capture the intermediate to a scratch file and test it. | `checkbashisms` |
@@ -1261,9 +1262,10 @@ FAIL  .gitattributes does not pin '*.sh text eol=lf'. A Windows checkout will CR
 
 The WARN is expected. No Class F script exists yet, so `SCRIPTS` is empty, the per-file loop does not run, and the shellcheck stage is skipped by the `-z` guard.
 
-The FAIL is a real finding, not a bug in the check. `/Users/pmudh/Documents/GitHub/Atlanta/.gitattributes` currently contains only a comment line and `* text=auto`.
-So pasting this block in blocks every commit until `.gitattributes` is fixed.
-Fix it in the same commit that adds the block. Append these two lines to `.gitattributes`:
+The FAIL shown above is what the check printed **before** the pin landed. It no longer fires.
+`/Users/pmudh/Documents/GitHub/Atlanta/.gitattributes` was fixed on 20 August 2026 and now carries the lines below beneath the original `* text=auto`.
+Confirm with `git check-attr text eol -- scripts/validate.sh`, which prints `text: set` and `eol: lf`.
+Kept here because the check is worth understanding: had the pin not landed, this block would correctly have blocked every commit until it did.
 
 ```
 *.sh text eol=lf

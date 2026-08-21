@@ -108,7 +108,9 @@ That definition matters: it is what "founder-facing" means to every style and fa
 
 Thirty one checks in nine groups.
 The nine groups are confirmed by `grep -n 'head_ ' /Users/pmudh/Documents/GitHub/Atlanta/scripts/validate.sh`, which on 21 August 2026 returns nine hits, at lines 33, 94, 137, 160, 181, 199, 222, 247 and 275.
-The check ids `EX-01` to `EX-31` below are numbering invented in this document for reference.
+The check ids `CK-01` to `CK-31` below are numbering invented in this document for reference.
+`CK` means check. They are not build tasks and they are not the `EX-` example tasks in section 04.
+New checks added by this plan are numbered `V-01` upward, also local to this document.
 They are existing checks. New checks are numbered `V-01` upward.
 Neither series is a build task; build task ids live in section 02 and use different prefixes.
 They do not appear in `validate.sh` itself, so do not grep for them there.
@@ -118,44 +120,44 @@ Running `bash scripts/validate.sh` from `/Users/pmudh/Documents/GitHub/Atlanta` 
 
 | Id | Check | Severity |
 |---|---|---|
-| EX-01 | `.claude-plugin/marketplace.json` exists at the repo root | FAIL |
-| EX-02 | `.claude-plugin/marketplace.json` exists and parses as JSON via `python3 -c "import json; json.load(...)"` | FAIL |
-| EX-03 | `plugins/growth-engine/.claude-plugin/plugin.json` exists and parses as JSON | FAIL |
-| EX-04 | Every `plugin install growth-engine@<x>` string in `README.md` and `docs/` has `<x>` equal to `marketplace.json` `name` | FAIL |
-| EX-05 | `marketplace.json` `owner.url` equals `https://github.com/<path>` where `<path>` is the first documented `plugin marketplace add <path>` | FAIL |
-| EX-06 | `marketplace.json` `version` equals `plugin.json` `version`, and neither is empty | FAIL |
-| EX-07 | If `plugin.json` declares `SEE LICENSE IN LICENSE`, then `plugins/growth-engine/LICENSE` exists | FAIL |
+| CK-01 | `.claude-plugin/marketplace.json` exists at the repo root | FAIL |
+| CK-02 | `.claude-plugin/marketplace.json` exists and parses as JSON via `python3 -c "import json; json.load(...)"` | FAIL |
+| CK-03 | `plugins/growth-engine/.claude-plugin/plugin.json` exists and parses as JSON | FAIL |
+| CK-04 | Every `plugin install growth-engine@<x>` string in `README.md` and `docs/` has `<x>` equal to `marketplace.json` `name` | FAIL |
+| CK-05 | `marketplace.json` `owner.url` equals `https://github.com/<path>` where `<path>` is the first documented `plugin marketplace add <path>` | FAIL |
+| CK-06 | `marketplace.json` `version` equals `plugin.json` `version`, and neither is empty | FAIL |
+| CK-07 | If `plugin.json` declares `SEE LICENSE IN LICENSE`, then `plugins/growth-engine/LICENSE` exists | FAIL |
 
-EX-07 exists because the marketplace installs only `./plugins/growth-engine`.
+CK-07 exists because the marketplace installs only `./plugins/growth-engine`.
 A LICENSE at the repo root is not carried into an install.
 
 **Group: Skills**
 
 | Id | Check | Severity |
 |---|---|---|
-| EX-08 | Every `skills/<name>/` directory contains `SKILL.md` | FAIL |
-| EX-09 | `SKILL.md` line 1 is exactly `---` | FAIL |
-| EX-10 | `SKILL.md` line 2 is not blank (a blank line inside frontmatter silently breaks parsing) | FAIL |
-| EX-11 | `name:` exists in the first 12 lines and equals the directory name | FAIL |
-| EX-12 | `description:` exists in the first 12 lines | FAIL |
-| EX-13 | No repeated markdown headings outside fenced code blocks | WARN |
-| EX-14 | Exactly 9 skill directories exist | WARN |
+| CK-08 | Every `skills/<name>/` directory contains `SKILL.md` | FAIL |
+| CK-09 | `SKILL.md` line 1 is exactly `---` | FAIL |
+| CK-10 | `SKILL.md` line 2 is not blank (a blank line inside frontmatter silently breaks parsing) | FAIL |
+| CK-11 | `name:` exists in the first 12 lines and equals the directory name | FAIL |
+| CK-12 | `description:` exists in the first 12 lines | FAIL |
+| CK-13 | No repeated markdown headings outside fenced code blocks | WARN |
+| CK-14 | Exactly 9 skill directories exist | WARN |
 
 **Group: Commands**
 
 | Id | Check | Severity |
 |---|---|---|
-| EX-15 | Every `commands/*.md` opens with `---` and carries `description:` in the first 6 lines | FAIL |
-| EX-16 | Every `<word> skill` phrase in a command file names a skill directory that exists | FAIL |
-| EX-17 | Exactly 10 command files exist | WARN |
+| CK-15 | Every `commands/*.md` opens with `---` and carries `description:` in the first 6 lines | FAIL |
+| CK-16 | Every `<word> skill` phrase in a command file names a skill directory that exists | FAIL |
+| CK-17 | Exactly 10 command files exist | WARN |
 
-EX-16 has two problems, both confirmed by reading lines 148 to 153 of `/Users/pmudh/Documents/GitHub/Atlanta/scripts/validate.sh` on 21 August 2026.
+CK-16 has two problems, both confirmed by reading lines 148 to 153 of `/Users/pmudh/Documents/GitHub/Atlanta/scripts/validate.sh` on 21 August 2026.
 
 The first is a trap that will bite the moment someone writes naturally.
 The pattern is `grep -o '[a-z][a-z0-9-]* skill'`, unanchored, so a command file containing the ordinary English words "this skill" or "the skill" produces `routes to skill 'this', which does not exist` and fails the build.
 It passes today only because no command file happens to contain those phrases.
 
-The second is that EX-16 only checks that a named skill exists.
+The second is that CK-16 only checks that a named skill exists.
 It never checks that a skill is named.
 A command file that routes to nothing passes silently.
 `plugins/growth-engine/commands/gate.md` is exactly that file today: `grep -inE '(use|run) the [a-z][a-z0-9-]* skill' plugins/growth-engine/commands/gate.md` returns nothing, so `/growth-engine:gate` routes to no skill and the validator is content.
@@ -166,7 +168,7 @@ Check V-19 below anchors the pattern, makes it case-insensitive so `engine2.md`'
 
 | Id | Check | Severity |
 |---|---|---|
-| EX-18 | No bare `/setup`, `/doctor`, `/brain`, `/content`, `/engine2`, `/ops`, `/plan`, `/gate`, `/playbook`, `/status` in founder-facing files | FAIL |
+| CK-18 | No bare `/setup`, `/doctor`, `/brain`, `/content`, `/engine2`, `/ops`, `/plan`, `/gate`, `/playbook`, `/status` in founder-facing files | FAIL |
 
 The implementation first strips every `/growth-engine:<name>` occurrence, then excludes lines beginning `description:` (so a skill description may carry a bare form as a natural language trigger), then greps for a bare command preceded by a non word character.
 This is the check that stops 130 people typing something that resolves to nothing.
@@ -175,10 +177,10 @@ This is the check that stops 130 people typing something that resolves to nothin
 
 | Id | Check | Severity |
 |---|---|---|
-| EX-19 | No `ONEDAY_ORG` or `REPO_NAME` token survives in founder-facing files | FAIL |
-| EX-20 | No file under `plugins/growth-engine/assets/` contains `TODO` | WARN |
+| CK-19 | No `ONEDAY_ORG` or `REPO_NAME` token survives in founder-facing files | FAIL |
+| CK-20 | No file under `plugins/growth-engine/assets/` contains `TODO` | WARN |
 
-EX-20 is the one that currently fires.
+CK-20 is the one that currently fires.
 Counted on 21 August 2026 by running `grep -rn TODO plugins/growth-engine/assets` from the repo root: 6 in `plugins/growth-engine/assets/ghl/README.md` and 4 in `plugins/growth-engine/assets/forms/README.md`, which is 10 occurrences across 2 files, and no others anywhere under `plugins/growth-engine/`.
 Note that this contradicts the figure of 15 that circulates in the project status notes.
 Ten is the number the repo actually contains today.
@@ -188,34 +190,34 @@ If a status document still says 15, correct the status document rather than hunt
 
 | Id | Check | Severity |
 |---|---|---|
-| EX-21 | No em dash and no en dash anywhere in a founder-facing file | FAIL |
-| EX-22 | No banned marketing word: `supercharge*`, `unlock*`, `revolutionary`, `seamless*`, `leverage*`, `effortless*`, `synergy`, `turnkey`, and the phrases `game changer`, `cutting edge`, `best in class` | FAIL |
+| CK-21 | No em dash and no en dash anywhere in a founder-facing file | FAIL |
+| CK-22 | No banned marketing word: `supercharge*`, `unlock*`, `revolutionary`, `seamless*`, `leverage*`, `effortless*`, `synergy`, `turnkey`, and the phrases `game changer`, `cutting edge`, `best in class` | FAIL |
 
 **Group: Design rules**
 
 | Id | Check | Severity |
 |---|---|---|
-| EX-23 | Nothing guarantees or promises a reply, unless the line also carries a negation | FAIL |
-| EX-24 | Any mention of DM automation is surfaced for manual confirmation that the line refuses it | WARN |
-| EX-25 | `commands/engine2.md` still contains the word `track` (the two track fork is the product) | FAIL |
+| CK-23 | Nothing guarantees or promises a reply, unless the line also carries a negation | FAIL |
+| CK-24 | Any mention of DM automation is surfaced for manual confirmation that the line refuses it | WARN |
+| CK-25 | `commands/engine2.md` still contains the word `track` (the two track fork is the product) | FAIL |
 
 **Group: Locked facts**
 
 | Id | Check | Severity |
 |---|---|---|
-| EX-26 | No clinic date other than 23 September appears in a founder-facing file | FAIL |
-| EX-27 | Typeform is never named as the gate destination without a negation | FAIL |
-| EX-28 | No founder-facing file references `TASKS.md`, `MASTERPLAN.md`, `RUNBOOK.md` or `AUDIT.md`, which live outside the repo | FAIL |
+| CK-26 | No clinic date other than 23 September appears in a founder-facing file | FAIL |
+| CK-27 | Typeform is never named as the gate destination without a negation | FAIL |
+| CK-28 | No founder-facing file references `TASKS.md`, `MASTERPLAN.md`, `RUNBOOK.md` or `AUDIT.md`, which live outside the repo | FAIL |
 
 **Group: Hygiene**
 
 | Id | Check | Severity |
 |---|---|---|
-| EX-29 | `.gitignore` carries `/growth-engine/` anchored, and specifically not the unanchored form which also excluded `plugins/growth-engine/` | FAIL |
-| EX-30 | No file under `growth-engine/` is tracked in git, and the tracked skill and command counts match what exists on disk | FAIL |
-| EX-31 | No internal material is tracked: `MASTERPLAN.md`, `TASKS.md`, `RUNBOOK.md`, `AUDIT.md`, `EXECUTE.md`, `STATE.md`, anything matching `proposal`, `brief`, `sessions-and-mentor` | FAIL |
+| CK-29 | `.gitignore` carries `/growth-engine/` anchored, and specifically not the unanchored form which also excluded `plugins/growth-engine/` | FAIL |
+| CK-30 | No file under `growth-engine/` is tracked in git, and the tracked skill and command counts match what exists on disk | FAIL |
+| CK-31 | No internal material is tracked: `MASTERPLAN.md`, `TASKS.md`, `RUNBOOK.md`, `AUDIT.md`, `EXECUTE.md`, `STATE.md`, anything matching `proposal`, `brief`, `sessions-and-mentor` | FAIL |
 
-EX-30's second half is subtle and worth keeping: it compares `git ls-files` counts against disk counts, which is what caught the unanchored gitignore silently excluding every skill from the published plugin.
+CK-30's second half is subtle and worth keeping: it compares `git ls-files` counts against disk counts, which is what caught the unanchored gitignore silently excluding every skill from the published plugin.
 
 **Known weaknesses in the current gate, all closed below.**
 
@@ -230,16 +232,16 @@ EX-30's second half is subtle and worth keeping: it compares `git ls-files` coun
   V-01 to V-03 fix that on the day `bin/ge` lands.
 - Nothing checks anything the locked scope forbids.
   V-13 and V-14 pin the cut list so a rewrite cannot quietly reintroduce the DM inbox skill, `ge dmgate`, `commands/inbox.md`, or the three withdrawn conversations PIT scopes.
-- EX-21, the dash check, is written as a bracket expression holding two multi-byte characters, which silently degrades to a byte match when `LANG` and `LC_ALL` are unset.
+- CK-21, the dash check, is written as a bracket expression holding two multi-byte characters, which silently degrades to a byte match when `LANG` and `LC_ALL` are unset.
   It then reports a false em dash on any file containing an arrow or a box-drawing character.
   Verified on 21 August 2026: it passes today only because no founder-facing markdown file contains an arrow yet, and the code standard is about to put arrows in every recovery line.
   V-17 replaces it with an exact byte-sequence match.
-- EX-16 only proves that a named skill exists, never that a skill is named, so `commands/gate.md` routing to nothing passes.
+- CK-16 only proves that a named skill exists, never that a skill is named, so `commands/gate.md` routing to nothing passes.
   It is also case-sensitive in a way that does not matter yet but will: `commands/engine2.md` writes `use the` in lower case.
   V-19 fixes both directions.
 - Nothing compares the README's plain-language trigger column against the descriptions of the skills those commands route to.
   V-10 adds that, and finds five real disagreements on the current repo.
-- EX-14 and EX-17 assert exactly 9 skill directories and exactly 10 command files.
+- CK-14 and CK-17 assert exactly 9 skill directories and exactly 10 command files.
   Both figures are correct as of 21 August 2026 and both are about to change under the locked scope, which adds `ghl-publish` and `connect` skills and the `publish`, `connect`, `undo` and `update` commands.
   V-18 replaces the magic numbers with a declared manifest.
 
@@ -892,7 +894,7 @@ Note this one is DEFERRED scope, so it is fixed by editing the README row rather
 `gate`: `plugins/growth-engine/commands/gate.md` contains no `Use the <skill> skill` line at all.
 It routes to nothing.
 `/growth-engine:gate` is one of the ten shipped commands and it is on the founder's homework path for all three gates.
-This is the most serious of the five and it is invisible to the current validator, because check EX-16 only verifies that a named skill exists, never that a skill is named.
+This is the most serious of the five and it is invisible to the current validator, because check CK-16 only verifies that a named skill exists, never that a skill is named.
 Check V-19's second half catches it from the other direction.
 
 Fix all five before the 3 September freeze.
@@ -1323,7 +1325,7 @@ Then prove the touch-count half separately by deleting the `Touch 4` and `Touch 
 #### V-16. No automated Instagram or Facebook direct messages
 
 **Catches.** Design rule 1, which is the one that gets founder accounts restricted.
-The existing EX-24 is a WARN that asks a human to read the lines.
+The existing CK-24 is a WARN that asks a human to read the lines.
 It stays, because context matters, but the unambiguous forms become a FAIL.
 
 **Shell.**
@@ -1374,7 +1376,7 @@ bash scripts/validate.sh ; echo "exit=$?"
 
 First, `CHANGELOG.md` is founder readable (the update command shows it) but `founder_files()` in `/Users/pmudh/Documents/GitHub/Atlanta/scripts/validate.sh` does not include it, so no style rule reaches it.
 
-Second, and this one is a live defect rather than a gap, the existing EX-21 dash check is written as a bracket expression containing two multi-byte characters:
+Second, and this one is a live defect rather than a gap, the existing CK-21 dash check is written as a bracket expression containing two multi-byte characters:
 
 ```bash
 DASHES=$(grep -rn '[<EM><EN>]' $(founder_files) 2>/dev/null || true)
@@ -1399,7 +1401,7 @@ Fix it by matching the exact byte sequences instead of a bracket set.
 
 Third, the one sentence per physical line rule for long markdown is written down nowhere executable.
 
-**Shell.** This block replaces the existing EX-21 body as well as adding new coverage.
+**Shell.** This block replaces the existing CK-21 body as well as adding new coverage.
 
 ```bash
 head_ "Style coverage"
@@ -1461,7 +1463,7 @@ env -u LANG -u LC_ALL bash scripts/validate.sh ; echo "no-locale exit=$?"
 ```
 
 Both must exit with the same code, and neither may report a dash.
-Under the current EX-21 implementation the second run reports a dash that does not exist.
+Under the current CK-21 implementation the second run reports a dash that does not exist.
 Under this V-17 implementation both are clean.
 That difference is the whole point of the change.
 
@@ -1571,9 +1573,9 @@ The legitimate alternative resolution is to keep the directory and add `skill:sc
 
 #### V-19. Command routing check, corrected
 
-**Catches.** The same thing EX-16 catches, without the false positive on "this skill" that will fire the first time someone writes a normal English sentence in a command file.
+**Catches.** The same thing CK-16 catches, without the false positive on "this skill" that will fire the first time someone writes a normal English sentence in a command file.
 
-**Shell.** Replace the EX-16 loop body with the block below.
+**Shell.** Replace the CK-16 loop body with the block below.
 Note the `-i` on both greps: `plugins/growth-engine/commands/engine2.md` writes `use the` in lower case at lines 7 and 8, and a case-sensitive pattern would report that file as routing nowhere while it routes correctly.
 
 ```bash
@@ -1603,7 +1605,7 @@ printf '\nRead this skill before starting.\n' >> plugins/growth-engine/commands/
 bash scripts/validate.sh ; echo "exit=$?"
 ```
 
-Under the EX-16 pattern as it stands today this prints `FAIL  commands/ops.md routes to skill 'this', which does not exist` and `exit=1`, which is wrong: the sentence is ordinary English.
+Under the CK-16 pattern as it stands today this prints `FAIL  commands/ops.md routes to skill 'this', which does not exist` and `exit=1`, which is wrong: the sentence is ordinary English.
 Under V-19 the same run is clean and `exit=0`.
 Remove the planted line either way.
 
@@ -1676,7 +1678,7 @@ bash scripts/validate.sh ; echo "exit=$?"
 Expect `WARN  asset placeholders still open:` and `exit=0`.
 
 Now bump both version fields to 1.0.0 and rerun.
-Both files must move together or check EX-06 fails first and masks this one:
+Both files must move together or check CK-06 fails first and masks this one:
 
 ```sh
 cd /Users/pmudh/Documents/GitHub/Atlanta
@@ -1773,6 +1775,13 @@ Also run by all four CI jobs on every push.
 
 **On failure.** The commit does not happen.
 A red test is a bug in the code until someone proves it is a stale expectation, and proving that means reading the diff and deciding the new output is correct, then updating the fixture with `--update` and showing the fixture diff in the commit body.
+
+> **Amended by section 08.** The suite gains a case group for `ge remember`, the memory layer.
+> It carries the three failure modes that are hardest to get right and easiest to regress:
+> a managed block whose start marker has no matching end marker must be refused rather than guessed at;
+> an amend whose anchor text is not present byte-exactly must write nothing and exit 1;
+> and a founder file carrying carriage returns must still parse, because a Windows editor will eventually save one.
+> Fixtures go under `tests/fixtures/09-remember/`. Add 0.1d to the suite's effort.
 
 ### 2.1 Why golden tests and not unit tests
 
@@ -2339,7 +2348,9 @@ jobs:
 
 Two supporting changes go with that YAML.
 
-`.gitattributes` gains explicit LF pinning, because `* text=auto` alone is not enough for files Git does not confidently detect as text:
+`.gitattributes` carries explicit LF pinning, because `* text=auto` alone is not enough: it normalises to LF inside the repository but converts to the platform's native ending on checkout, which on Windows is CRLF.
+This landed on 20 August 2026. Verify with `git check-attr text eol -- scripts/validate.sh`, which must print `text: set` and `eol: lf`.
+The file now reads:
 
 ```
 * text=auto
@@ -2349,7 +2360,8 @@ tests/run.sh text eol=lf
 *.csv text eol=lf
 ```
 
-After adding those lines, run `git add --renormalize .` once and commit the result.
+`tests/run.sh` is already covered by the `*.sh` pattern, so it needs no line of its own.
+After any change to these patterns, run `git add --renormalize .` once and commit the result.
 
 The Claude Code version in the ubuntu job is pinned deliberately.
 An unpinned `@latest` means the plugin validator's behaviour changes under you, which turns CI into a source of unexplained red on days when nothing in the repo changed.

@@ -66,10 +66,10 @@ Three example folders, one per route, matching the three routes locked in sectio
 | Route | Folder | Founder | Business | Status |
 |---|---|---|---|---|
 | `b2b` | `b2b-northfield` | Sam Okoye | Northfield Ops, fractional operations for construction SMEs | Brain exists, everything else missing |
-| `b2c-ecom` | `b2c-ecom-lumen` | Priya Raman | Lumen Skin, a three-product sensitive-skin range sold direct | Brain exists under the old folder name `b2c-lumen`, everything else missing |
+| `b2c-ecom` | `b2c-lumen` | Priya Raman | Lumen Skin, a three-product sensitive-skin range sold direct | Brain exists under the old folder name `b2c-lumen`, everything else missing |
 | `b2c-service` | `b2c-service-brighthound` | Cara Whitfield | Bright Hound, dog behaviour and training in Bristol | Does not exist at all |
 
-**Rename `b2c-lumen` to `b2c-ecom-lumen`.**
+**Rename `b2c-lumen` to `b2c-lumen`.**
 Today the folder name encodes the track but not the model, and the model is what selects the GHL snapshot and forks half the content engine.
 Three folders named `b2b-`, `b2c-ecom-` and `b2c-service-` mean a founder can tell at a glance which one is theirs, and a mentor marking a b2c-service submission does not open the skincare example by mistake.
 
@@ -264,7 +264,7 @@ An example generated from uncommitted skills cannot be reproduced.
 
 Only the first of those three runs today.
 As committed, `/Users/pmudh/Downloads/Atlanta/launchhouse-atlanta/scripts/new-run.sh` accepts `b2b` or `b2c` and nothing else, per its usage line at the top of the file, and its `b2c` case seeds Priya's Brain from `b2c-lumen`.
-The two B2C route arguments above require `EX-01`, which is also what renames the seed path to `b2c-ecom-lumen`.
+The two B2C route arguments above require `EX-01`, which is also what renames the seed path to `b2c-lumen`.
 Each invocation prints the absolute path of the folder it made.
 
 **Step 2. Load the answer script.**
@@ -327,7 +327,7 @@ A folder that is half pre-fix and half post-fix is worse than no folder, because
 **Step 8. Import.**
 
 `import-example.sh` does not exist yet. It is new work under `EX-02`, and until `EX-02` lands the block below is a specification rather than a command you can run.
-Once it exists, the call takes the absolute path of the run folder that step 1 printed, and the example slug, which is one of `b2b-northfield`, `b2c-ecom-lumen` or `b2c-service-brighthound`.
+Once it exists, the call takes the absolute path of the run folder that step 1 printed, and the example slug, which is one of `b2b-northfield`, `b2c-lumen` or `b2c-service-brighthound`.
 Written out in full, for the Bright Hound run made on 2 September 2026:
 
 ```sh
@@ -412,7 +412,7 @@ Output:
 
 ```
 b2b-northfield           FRESH
-b2c-ecom-lumen           STALE  plugins/growth-engine/skills/content-engine/SKILL.md changed
+b2c-lumen           STALE  plugins/growth-engine/skills/content-engine/SKILL.md changed
 b2c-service-brighthound  MISSING MANIFEST
 ```
 
@@ -563,9 +563,9 @@ If the decision is reversed and it comes back in:
 | `EX-03` | Write `scripts/check-examples.sh` and wire it into `validate.sh` as warn below 1.0.0 and error at 1.0.0 | 0.5d | `EX-02` |
 | `EX-04` | Write the three `inputs/answers.md` answer scripts, and the Bright Hound brief from A.3 | 0.5d | none |
 | `EX-05` | Name and domain clearance for every invented entity across all three examples, plus the prospect fixture | 0.25d | `EX-04` |
-| `EX-06` | Rename `b2c-lumen` to `b2c-ecom-lumen` and fix the three references | 0.1d | none |
+| `EX-06` | Rename `b2c-lumen` to `b2c-lumen` and fix the three references | 0.1d | none |
 | `EX-07` | Generate `b2b-northfield` end to end and import it | 0.75d | all four systems built, `EX-01` to `EX-06` |
-| `EX-08` | Generate `b2c-ecom-lumen` end to end and import it | 0.75d | all four systems built, `EX-01` to `EX-06` |
+| `EX-08` | Generate `b2c-lumen` end to end and import it | 0.75d | all four systems built, `EX-01` to `EX-06` |
 | `EX-09` | Generate `b2c-service-brighthound` end to end and import it | 0.75d | all four systems built, `EX-01` to `EX-06` |
 | `EX-10` | Rewrite `plugins/growth-engine/assets/examples/README.md`: drop the "not finished yet" paragraph, add the three-route table, the dependency map from A.6, the fiction rule, the clearance date, and the publishing-depth note | 0.25d | `EX-07` to `EX-09` |
 | `EX-11` | Full regeneration sweep before the mentor deadline (1 September) and again before the freeze (3 September) | 0.5d | `EX-10` |
@@ -714,6 +714,15 @@ It refers to a setup clinic on 23 September for GHL, while the connect walk that
 **Acceptance.** The seven scope strings in this document are byte-identical to the seven in the connect skill, checked by CI. Every click path is verified against the live GoHighLevel and Apollo interfaces on the day the document is written, with the date recorded in the document, because these interfaces change.
 
 ### B.5 `docs/USING-IT.md`, task `D-06`
+
+> **Amended by section 08, the persistent memory layer.**
+> This document gains a section, **"What the toolkit remembers"**, covering five things.
+> One: that `growth-engine/memory.md` exists, what is in it, and that it is theirs to read at any time.
+> Two: that everything under the `## Notes` heading at the bottom belongs to the founder and `ge` never writes there.
+> Three: that the six blocks between the `GE:` marker comments are written by the toolkit, that hand-editing inside them is safe but will be overwritten on the next write, and that the `## Notes` area is where a founder's own thoughts survive.
+> Four: how to correct a wrong memory, which is to say so in plain words, because the skill runs `ge remember --amend` or `ge remember forget` and both snapshot first.
+> Five: that the memory is why the toolkit still knows their voice and their spent angles in December, which is the ninety-day promise made concrete.
+> Add 0.1d to `D-06`.
 
 **Exists.** No. This is the document the client specifically asked for and the one with no precedent in the repository.
 
