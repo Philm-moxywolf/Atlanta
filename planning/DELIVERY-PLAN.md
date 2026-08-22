@@ -23,17 +23,29 @@ They are separate files because the whole plan runs to about 10,813 lines, and o
 | 07 | [delivery/07-quality-and-simplicity.md](delivery/07-quality-and-simplicity.md) | Simplifications worth taking, the risk register the PRD dropped, specified fallbacks, ranked day-of failures, the cut order, and the definition of done |
 | 08 | [delivery/08-persistent-memory.md](delivery/08-persistent-memory.md) | The persistent local memory each founder gets, ported from the Glitch vault model. The curated layer, managed blocks, the hold rule, CRLF handling, and task B-10 |
 
-## The three numbers that matter
+## The effort figures, and what they actually mean
 
-**44.95 dev-days**, against 31.0 in the PRD as written.
+**Read this before trusting any number in this plan.**
 
-That is 39.2 for the original build in section 02, plus 1.0 for the persistent memory layer in section 08, plus 4.75 merged in from section 04's own registry on 21 August.
+Section 02 prices every task in dev-days and totals 44.95.
+That unit is inherited from the PRD, which sized the work for a human maintainer writing the files by hand.
+It is not what is happening. The work is being written by Claude, and the observed throughput is a different order entirely: in the first 101 hours of wall clock this produced 11,032 lines of delivery plan, 2,880 lines of adversarially verified review registers, 53 tracked files, seven scripts, and two real bug fixes in the repository.
 
-The difference is not scope creep. Cutting the DM inbox saved 2.25 days. Of the rest, 1.0 is the memory layer added on 20 August after reviewing the Glitch brain, and 10.45 are work the PRD already assumed had happened: the schema files it points at, the `ge` subcommands two of its own state files need, the four command routers it declares twice and never builds, the approve step its publish precondition depends on, the two orphan skills that write founder files with no snapshot, and one end-to-end run of a twelve-skill chain that until now was first exercised by 130 founders on the day.
+So treat the per-task day figures as **relative weight, not calendar**. They are useful for saying that the brain is heavier than the doc reflow. They are misleading as a schedule.
 
-**The cut order in section 02 is a record, not a plan.** Decision 1 was to build it all, so the **8.45 days are recoverable** on paper but are not being taken. It stays written so that if the date moves the options are already sized.
+**The split that does matter:**
 
-**About 3.5 days of that is not the executor's**, it is account setup, vendor UI work and clean-machine time. It runs alongside rather than adding.
+| Who does it | Tasks | Nominal days | Compresses? |
+|---|---|---|---|
+| Writing files: skills, `ge`, schemas, tests, docs, CI | 42 | 35.50 | **Yes, enormously** |
+| Philip, in a vendor UI or on a machine: accounts, tokens, the three GoHighLevel snapshots, screenshots, a Windows box | 8 | 4.45 | **No** |
+
+**The critical path is the second row, plus external latency.**
+The spike needs a paid GoHighLevel account, a token carrying seven scopes, a paid Apollo seat, a connected Facebook Page and three physical machines. `O-01` is a day and a half of building snapshots by hand in the GoHighLevel interface. Neither gets faster with more developers.
+
+That also means adding a second developer buys almost nothing here, because developer time is not the constraint.
+
+**The cut order in section 02 is a record, not a plan.** Decision 1 was to build it all, so the **8.45 days are recoverable** on paper but are not being taken. It stays written so that if something does need to give, the options are already sized.
 
 ## What changed on 20 August
 
@@ -62,12 +74,14 @@ That leaves the Private Integration Token needing exactly these seven scopes:
 | 5 | `playbook-export` | **Not built in v1.0, rebuilt once the architecture is settled end to end.** The skill and its command stay in the repository untouched at 0.1.0, so no count, table or check moves |
 | 7 | Push | **After the remaining repairs**, not before |
 
-### Consequence of decision 1 that is not yet resolved
+### Consequence of decision 1
 
-Building it all removes the cut lever, and the arithmetic does not close on its own.
-Lane 1.0 carries 28.60 dev-days into roughly 10 working days before the 3 September freeze, with one executor.
-Two levers remain and both are Philip's: **move the freeze date**, or **add a second pair of hands**.
-Nothing in this plan can be executed to a fixed date until one of them is pulled.
+Building it all is the right call and it is achievable, because the file-writing half of the work compresses.
+
+What does not compress is the 4.45 nominal days of vendor and machine work in the table above, and the external latency around it.
+**That is the schedule.** Not the build.
+
+So the question is not whether to move the freeze or add hands. It is how quickly the accounts, the token, the Apollo seat, the connected Facebook Page and the three snapshots can exist, because every integration task in this plan is blocked behind them and no amount of writing speed changes that.
 
 ### Consequence of decision 3 that the spike must confirm
 

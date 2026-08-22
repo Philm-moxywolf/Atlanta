@@ -68,6 +68,12 @@ It does not look at `REPO/planning/`, so nothing in that folder is style-checked
 
 ### Effort under the revised scope
 
+> **What these day figures mean.** They are inherited from the PRD, which priced the work for a human maintainer writing every file by hand.
+> That is not how this is being built, so read them as relative weight rather than as calendar.
+> The figure that matters for scheduling is the 4.45 nominal days of vendor-account and machine work marked ⚑HUMAN, because that is the part that does not compress.
+> See the index at `/Users/pmudh/Documents/GitHub/Atlanta/planning/DELIVERY-PLAN.md` for the full split.
+
+
 | Line | Dev-days |
 |---|---|
 | PRD Part Three as written | 31.00 |
