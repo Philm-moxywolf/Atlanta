@@ -9,9 +9,9 @@ Everything else in that PRD still stands.
 | # | System | What the founder ends up with |
 |---|---|---|
 | 1 | **Content engine** | 30 pieces in their own voice, tracked in a ledger, exported as CSV, and scheduled into GoHighLevel Social Planner through the official GHL MCP with read-back verification |
-| 2 | **Outbound engine** | B2B: a live Apollo search, 35 prospects built and cut to 25, enriched, made into contacts, and a sequence with a per-contact opening line enrolled **paused** for the founder to activate. B2C: 25 DM openers sent by hand, a hook bank, and offer tests |
+| 2 | **Outbound engine** | B2B: a live Apollo search, 35 prospects built and cut to 25, enriched, made into contacts, and a sequence with a per-contact opening line enrolled **paused** for the founder to activate. B2C: 25 DM openers sent by hand, a hook bank, and offer tests. Every one of those people gets a file in `growth-engine/people/`: 35 for B2B with 10 at `status: cut`, 25 for B2C. See section 09 |
 | 3 | **Back-end ops** | One of three GoHighLevel snapshots, chosen automatically by track and model, with every message written as a namespaced custom value. This includes comment-to-DM capture and DM qualify-and-book |
-| 4 | **The brain** | `bin/ge`: schema'd state, one writer per file, snapshot before every overwrite with undo, an append-only ops log, a **curated memory that persists across sessions** (`growth-engine/memory.md`, written by `ge remember`), a derived index, and a doctor that prints evidence rather than assertions. The memory layer is specified in section 08 |
+| 4 | **The brain** | `bin/ge`: schema'd state, one writer per file, snapshot before every overwrite with undo, an append-only ops log, a **curated memory that persists across sessions** (`growth-engine/memory.md`, written by `ge remember`), a **per-person entity layer** (one file per person under `growth-engine/people/`, written by `ge person`), a derived index, and a doctor that prints evidence rather than assertions. The memory layer is specified in section 08, the people layer in section 09 |
 
 ### Cut on 20 August. Do not build. Do not reference as coming later
 

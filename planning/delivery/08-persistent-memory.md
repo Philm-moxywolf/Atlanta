@@ -23,7 +23,7 @@ The parts worth copying are architectural rather than technical, because Glitch 
 | Line endings forced to LF so a Windows checkout cannot corrupt the vault | **Yes, was missing** | `.gitattributes`, fixed, and the read rule below |
 | A scheduled dream that consolidates memory overnight | **No** | The PRD forbids autonomous loops. A skill calls `ge remember` in-session, with the founder present |
 | Hybrid RAG search over the vault | **No** | PRD section 1.5 non-goal. `grep` over a file that is deliberately kept short |
-| A people directory with typed notes and a projector | **No** | The ledger's `O|` rows already carry prospects. A second entity store is not earned |
+| A people directory with typed notes and a projector | **Yes, with the projector dropped** | `growth-engine/people/`, one file per person, sole writer `ge person`, specified in section 09. This row read **No** when it was written, on the grounds that the ledger's `O|` rows already carried prospects and a second store was not earned. What changed is that those rows are retired rather than kept, so there is no second store. There is one store, in a better place. The projector stays out: at twenty five people `grep` over the files reads the truth, and a projected copy would be a second writer and a staleness class |
 | Heartbeat and habits files | **No** | Placeholders even in Glitch, and there is no scheduler here |
 
 ### Why the curated layer is the missing piece
@@ -117,14 +117,19 @@ Everything outside every marker pair belongs to the founder and is never touched
 
 **The four hard constraints:**
 
-1. The markers are matched byte-exactly, including the spaces inside the comment. A near-miss is a missing block, not a fuzzy match.
+1. The markers are matched byte-exactly, including the spaces inside the comment, after one trailing carriage return is stripped. A near-miss is a missing block, not a fuzzy match.
+   The carriage-return stripping applies to marker lines exactly as it applies to field lines, because a Windows editor that saves a person file will save the markers inside it the same way.
 2. If a block's start marker is present and its end marker is not, `ge` writes nothing and exits 1 with a recovery line. A half-marked file is a damaged file and guessing where the block ends is how a founder loses a paragraph.
 3. If a block is absent entirely, `ge` appends the whole block, markers included, under its heading. It never inserts a bare entry into unmarked prose.
 4. Snapshot first, as everywhere else. If the snapshot cannot be taken the write does not happen.
 
 **Where blocks apply.** `memory.md`, in the six blocks above.
-Nothing else adopts markers in version 1.0.
+Section 09 widens this, and it is the only thing that does.
+It puts every person file under `growth-engine/people/` into the marker world, and `dm-openers.md` with it, and it names the blocks, the writer of each and the block-ownership rule for `dm-openers.md`, which two writers share.
+`dm-openers.md` is the one existing file whose write model moves: it was a whole-file rewrite by `audience-b2c` and becomes a preserve-everything-outside-the-markers write, amended in section 09.
+Nothing beyond those three adopts markers in version 1.0.
 `founder-brain.md` and `content-30.md` keep whole-file rewrite with snapshot-first, because changing their write model mid-build touches five tasks and buys less than it costs.
+That reasoning is about files that already have a write model. Person files are new and have none, which is why section 09 can give them markers without paying it.
 Section 07's backlog is where that belongs.
 
 ### The hold rule: an edit that cannot find its anchor is held, not forced

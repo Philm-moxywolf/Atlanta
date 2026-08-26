@@ -7,7 +7,7 @@ It replaces Part Three of `planning/PRD-growth-engine-v1.md` and overrides that 
 Everything else in the PRD still stands.
 
 **Read this page, then read the sections in order.**
-They are separate files because the whole plan runs to about 10,813 lines, and one file that long is worse to work in than nine that are each about one thing.
+They are separate files because the whole plan runs to about 12,800 lines, and one file that long is worse to work in than ten that are each about one thing.
 
 ## The sections
 
@@ -15,13 +15,14 @@ They are separate files because the whole plan runs to about 10,813 lines, and o
 |---|---|---|
 | 00 | [delivery/00-scope.md](delivery/00-scope.md) | What is being built and what was cut on 20 August. The four systems, the seven token scopes, the three routes, the four surfaces, the eight rules |
 | 01 | [delivery/01-state.md](delivery/01-state.md) | Exactly where this starts from, every fact re-checked against the tree with the command to re-verify it |
-| 02 | [delivery/02-build-steps.md](delivery/02-build-steps.md) | The build. 40 tasks across eleven phases, each with dependencies, numbered instructions, a runnable acceptance block and a commit line |
+| 02 | [delivery/02-build-steps.md](delivery/02-build-steps.md) | The build. 47 tasks across eleven phases, counting the seven `PPL-` tasks defined in section 09, each with dependencies, numbered instructions, a runnable acceptance block and a commit line |
 | 03 | [delivery/03-review-process.md](delivery/03-review-process.md) | The standing review machinery. Pre-commit gate, golden tests, three-OS CI, the end-to-end rehearsal, the release checklist, the regression rule, the 30-minute reviewer pass |
 | 04 | [delivery/04-examples-and-docs.md](delivery/04-examples-and-docs.md) | The complete example set for all three routes, how examples are generated rather than written, and every document the product needs including the day-to-day manual |
 | 05 | [delivery/05-routes-and-platforms.md](delivery/05-routes-and-platforms.md) | The coverage matrix, the operator path from clone to release, four founder walkthroughs, three route journeys, and a verifiable go-live checklist per route |
 | 06 | [delivery/06-code-standards.md](delivery/06-code-standards.md) | What "all the code is commented" means in enforceable terms. Header template, comment rules, the POSIX ban list with the portable idiom for each, error format, and how the validator checks it |
 | 07 | [delivery/07-quality-and-simplicity.md](delivery/07-quality-and-simplicity.md) | Simplifications worth taking, the risk register the PRD dropped, specified fallbacks, ranked day-of failures, the cut order, and the definition of done |
 | 08 | [delivery/08-persistent-memory.md](delivery/08-persistent-memory.md) | The persistent local memory each founder gets, ported from the Glitch vault model. The curated layer, managed blocks, the hold rule, CRLF handling, and task B-10 |
+| 09 | [delivery/09-people-layer.md](delivery/09-people-layer.md) | The per-person entity layer. One file per person under `growth-engine/people/`, written only by `ge person`, the retirement of the ledger's `O|` and `D|` rows, the amendment sweep that carries it, and tasks PPL-01 to PPL-07 |
 
 ## The effort figures, and what they actually mean
 
@@ -46,6 +47,19 @@ The spike needs a paid GoHighLevel account, a token carrying seven scopes, a pai
 That also means adding a second developer buys almost nothing here, because developer time is not the constraint.
 
 **The cut order in section 02 is a record, not a plan.** Decision 1 was to build it all, so the **8.45 days are recoverable** on paper but are not being taken. It stays written so that if something does need to give, the options are already sized.
+
+**The people layer, decided 24 August 2026.**
+The client compared three shapes for the local brain and took option 2, a per-person entity layer.
+Section 09 specifies it: one file per person at `growth-engine/people/<slug>.md`, sole writer `ge person`, keyed on the identifier and never on the name.
+The ledger's `O|` and `D|` row grammars are retired rather than derived, so every fact about a person has one home, and a consumer that was not migrated fails loudly instead of quietly reading a stale copy.
+It adds seven tasks, `PPL-01` to `PPL-07`, and 3.75 dev-days, priced in section 09 part 12.
+That takes the build total from 44.95 to 48.70 dev-days.
+The 44.95 figures on this page, in section 02's effort table and in section 08's arithmetic chain have not been re-summed yet.
+They move together, in one pass, as part of accepting section 09.
+None of the 3.75 is on the critical path, because it is all file writing, which is the half that compresses.
+Option 3, a database with entity resolution, an alias table and full text search, is the post-event path.
+It is not built for the event, and section 09 part 8 records what it would add.
+The file format is chosen so that option 3 can be built on top of it later without changing a single person file.
 
 ## What changed on 20 August
 
@@ -109,6 +123,7 @@ The plan uses more than one id series. They are not interchangeable, and mistaki
 | `EX-06..10` | Absorbed or closed: `EX-06` already applied, `EX-07..09` are the procedure for `X-01`, `EX-10` folds into `FB-02` | Section 04 Part A | Absorbed, not counted twice |
 | `D-06`, `D-07`, `D-10`, `D-11` | Documentation tasks, merged into section 02 Phase 7 on 21 August | Section 04 Part B, stubbed in section 02 | **Yes** |
 | `D-05`, `D-08`, `D-09`, `D-12` | Duplicates of `G2-03`, `G-02`, `G-01` and `O-02` | Section 04 Part B | Absorbed, not counted twice |
+| `PPL-01..07` | The people layer build tasks | Section 09 | **Yes** |
 | `CK-01..31` | Validator checks that exist today | Section 03, local reference only | Not tasks |
 | `V-01` upward | Validator checks this plan adds | Section 03, local reference only | Not tasks |
 
