@@ -11,3 +11,9 @@ node_modules/
 
 # Build artifact. Ship it as a release asset, not in the tree.
 /dist/
+
+# The golden suite sandbox. Rebuilt on every run.
+/tests/.work/
+
+# Internal. Rates, mentor briefs and the delivery plan. Never public.
+/planning/
