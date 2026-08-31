@@ -104,11 +104,11 @@ Write the copy for each. The workflow itself is a GHL snapshot loaded at the cli
 
 **Name the trigger in every label, not just the first one.**
 
-Write "Reply, sent when they comment:" above each piece of copy, every time. Not "Auto-DM:".
+Write "Reply, sent when they comment:" above each piece of copy, every time. Do not use a bare label that says only that a machine sends it.
 
 Two reasons, and the first is the one that matters to the founder. Every message in this file only goes out because somebody did something first, and a label that says so is the difference between a flow they can check and a flow they have to take on trust. A reader scanning the file should be able to see, at each step, what opened the window.
 
-The second is practical. A bare "Auto-DM:" heading reads as automating cold DMs, which is the one thing rule 2 refuses outright, and the refusal costs the whole run including the two files that had nothing to do with it. Naming the trigger is not a workaround. It is the sentence being accurate about what it describes.
+The second is practical. A label that names only the automation, and never what set it off, reads as automating cold messages, which is the one thing rule 2 refuses outright. That refusal costs the whole run, including the two files that had nothing to do with it. Naming the trigger is not a workaround. It is the sentence being accurate about what it describes.
 
 Output to `./growth-engine/inbound-scripts.md`.
 
