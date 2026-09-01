@@ -56,7 +56,11 @@ Claude cannot see inside the app. It has no idea who you are until you show it.
 
 In the app, open **Files** and press the button that downloads everything. You get a folder called `growth-engine`.
 
-Put that folder somewhere you will find it again. Then, in Claude, open that folder and start a conversation there.
+Unzip it. You now have a folder called `growth-engine`, with your Brain and everything else inside it.
+
+**Put it inside another folder, and open that one in Claude.** Make a folder called something like `launchhouse`, drop `growth-engine` inside it, and point Claude at `launchhouse`. Not at `growth-engine` itself.
+
+That sounds fussy and it is the one step people get wrong. Claude looks for a folder called `growth-engine` inside wherever you opened. Open `growth-engine` directly and it looks inside itself, finds nothing, and tells you that you have not started yet.
 
 That is the whole trick. With the folder open, Claude reads your Brain and writes in your voice. Without it, you get writing that could belong to anybody, delivered with total confidence, and that is worse than nothing.
 
