@@ -28,7 +28,9 @@ Ten seconds.
 
 ## 3. Get a Replit account
 
-The app runs on Replit. Go to replit.com, sign up, and take the **Core** plan at 20 USD/month.
+The app runs on Replit. Go to replit.com and sign up. You need the **Core** plan.
+
+**Do not pay for it yet.** Oneday is on Replit's partner programme, so we can get you Core for free. Ask in Slack before you put a card in. It is 20 USD a month if you buy it yourself.
 
 You need the paid plan because the free one cannot keep an app running on its own, and yours has to stay up between sessions.
 
@@ -175,11 +177,25 @@ Much lighter, because your posts are mostly words and LinkedIn does not need a p
 
 If you only do the first one, you are fine. The other two make a handful of posts better.
 
-### Also worth keeping, both tracks
+### Your own writing, both tracks, and do this one first
 
-Anything you have already written and published. Old posts, a newsletter, a page of your website, an email you were pleased with.
+Ten to twenty things you have already written. Old posts from anywhere, a newsletter, a page of your website, an email you were pleased with, long WhatsApp or Slack messages. If you sell to consumers, old captions count and are often the best of it.
 
 This is the one thing the engine cannot generate and cannot do without: **it is how it learns to sound like you rather than like a machine.** Founders who arrive with nothing they have written get content that reads like everybody else's.
+
+**When.** Between Session 1 and Session 2, and before you build your content engine rather than after. The engine writes your thirty pieces from what it knows about your voice at the moment you run it, so running it first means thirty pieces that read like a brochure and doing them again.
+
+You do not need any of it for Session 1 itself. There is nothing to bring to that session.
+
+**How much is enough.** Ten to twenty is what we are aiming for. Five or six is genuinely enough to work from, so do not hold off because you are short. Almost nothing is normal and not a problem: it asks you questions instead and uses how you speak.
+
+**What to do with it.** Put it in one folder, one piece per file, then add it in the app with **Add a file** next to the message box. Pasting a long piece into the message box works too, and the app offers to keep it as a file when it is long.
+
+Adding files is a new part of the app. Gather everything now, and we will post in Slack when the update is ready and exactly what to press. Do not go looking for it on your own.
+
+**What it reads.** Plain text, Markdown, CSV, PDF, and photos saved as PNG, JPG, GIF or WEBP. Up to 2 MB each.
+
+Two things it cannot read, both with a way round. A Word document: open it, choose File, then Save As, and pick PDF. A photo straight off an iPhone: the format iPhones use by default cannot be read, so email or message it to yourself and save it from there, which converts it. The app tells you both of these if you try, so nothing breaks quietly.
 
 ## Costs, so nothing surprises you
 
@@ -187,7 +203,7 @@ Only the first three are needed before Session 1. The rest arrive in the session
 
 | What | When | Cost |
 |---|---|---|
-| Replit Core | **Before Session 1** | 20 USD/month. Runs your app |
+| Replit Core | **Before Session 1** | **Free.** Ask in Slack and we sort it through Oneday's partner programme. 20 USD/month otherwise. Runs your app |
 | Keeping your app running | **Before Session 1** | From 15 USD/month. Set at the size your app needs when you publish it, and we do this together |
 | Anthropic API credit | **Before Session 1** | Billed by what you use. Put roughly 20 USD on to start and top it up when it runs low |
 | A domain, B2B only | Session 1 | Roughly 15 USD/year. You can buy it through Apollo in the session, which is the simplest route because it connects itself |
