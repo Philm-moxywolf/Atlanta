@@ -2,7 +2,7 @@
 
 Claude plugin for Launchhouse Atlanta, 25 to 27 September 2026.
 
-> **Pre-release.** This is version 0.1.0 and is still being built and tested. Founders on the programme receive the finished version, with setup instructions, on 4 September. Nothing here is final until then.
+> **In use.** This is version 0.2.0, the toolkit founders on the programme are running. The clinic is Wednesday 23 September, and [docs/AFTER-THE-ENGINES.md](docs/AFTER-THE-ENGINES.md) is what happens on the day. Fixes only from here.
 
 ## Two halves, and this repository is the second one
 
@@ -16,7 +16,11 @@ So the app makes the work and Claude runs it. Neither half replaces the other.
 
 [docs/SESSIONS.md](docs/SESSIONS.md) is what happens in each session and what the homework is.
 
-[docs/AFTER-THE-ENGINES.md](docs/AFTER-THE-ENGINES.md) is what a founder does once their engines are written: update the plugin, load the snapshot, fill the words it arrives without, publish, and test it for real.
+[docs/ROAD-TO-ATLANTA.md](docs/ROAD-TO-ATLANTA.md) is the whole arc on one page: where a founder is, what is left, and what has to be true before they travel.
+
+[docs/UPDATE-YOUR-SETUP.md](docs/UPDATE-YOUR-SETUP.md) is how a founder who has already downloaded their work takes the newest toolkit, and what to say to one who is afraid of losing it.
+
+[docs/AFTER-THE-ENGINES.md](docs/AFTER-THE-ENGINES.md) is what a founder does once their engines are written: update the toolkit, load the snapshot, fill the words it arrives without, publish, and test it for real.
 
 ## Install the plugin
 
