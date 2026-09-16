@@ -48,9 +48,9 @@ One only. Two half-finished workflows are worse than one running.
 
 | Snapshot | Runs on | Use when |
 |---|---|---|
-| Comment-to-DM capture | Instagram | Content gets engagement but no conversation |
+| Comment to DM | Instagram | Content gets engagement but no conversation |
 | DM qualify and book | Instagram | DMs arrive but conversion is manual and slow |
-| Review request | Email and SMS | Reviews are never asked for |
+| Review request | Email | Reviews are never asked for |
 
 The library is deliberately small. If the founder's bottleneck falls outside these six, for example onboarding, reactivation, abandoned checkout or win-back, pick the nearest snapshot and adapt the message copy to it, and note the gap in the output file so a mentor can help individually. Do not invent a snapshot that does not exist and do not attempt a bespoke build.
 
