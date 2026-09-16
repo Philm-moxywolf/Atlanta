@@ -7,7 +7,7 @@ description: Build the operations engine. Runs a bottleneck diagnostic, picks on
 
 Delivers the page promise: one workflow running on the founder's live business before they leave Atlanta.
 
-The workflow itself is a pre-built GoHighLevel snapshot, loaded in one click at the clinic. This skill does the two things that actually need thinking: choosing the right one, and writing the words inside it.
+The workflow itself is a pre-built GoHighLevel snapshot. It is loaded into the founder's own account at the clinic, and every message inside it arrives empty. This skill does the two things that actually need thinking: choosing the right one, and writing the words inside it.
 
 **Founders do not build workflows.** If a founder starts describing a bespoke automation, bring them back to the library. Bespoke is what fails at 130.
 
@@ -62,7 +62,9 @@ Recommend one and explain why against their stated bottleneck. Let them override
 
 The snapshot is the plumbing. The copy is the founder's.
 
-For the chosen snapshot, write every message it sends: emails with subject lines, SMS, DM replies, internal notifications. Written in the captured voice, matched to track.
+For the chosen snapshot, write every message it sends: emails with subject lines, DM replies, public comment replies and the words on any buttons. Written in the captured voice, matched to track.
+
+Two rules that make the copy usable later. **No greeting inside a message body:** the workflow step writes the greeting and the first name above it. **Nothing in square or curly brackets:** the words in a slot are the same for everyone who receives that message, and anything about one person is merged by the step.
 
 Also specify: the trigger, the wait intervals between steps, the exit condition, and which tags get applied.
 
@@ -84,7 +86,7 @@ Write `./growth-engine/ops-workflow.md` containing the named bottleneck, the cho
 
 The founder takes this to the setup clinic on 23 September and loads the snapshot. Loading brings every workflow and the empty name of every message slot, and none of the words.
 
-The words go in next, with `/growth-engine:values`, or by saying "fill my custom values". Publishing and the first live test come after that: a published workflow with empty values sends blank emails to real people.
+The words go in next, with `/growth-engine:values`, or by saying "fill my custom values". That step fills the Essentials slots every founder gets as well as the snapshot's own, so the copy written here is part of the list rather than all of it. Publishing and the first live test come after that, because a published workflow with empty slots sends blank emails to real people.
 
 ## Gate
 
