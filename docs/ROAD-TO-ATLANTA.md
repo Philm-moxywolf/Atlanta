@@ -12,7 +12,8 @@ Where you are, what is left, and what has to be true before you travel. Today is
 | Mon 14 or Tue 15 September | Session 2 | GoHighLevel bought and connected, Apollo finished for B2B |
 | Between 2 and 3 | Homework | Your second engine, and your operations engine: one snapshot chosen and all its copy |
 | Mon 21 or Tue 22 September | Session 3 | Your work out of the app and into Claude on your own machine |
-| Wed 23 September | The clinic | Your snapshot loaded, filled, published, and one real email in your own inbox |
+| That week | Homework | Your GoHighLevel words written, in `ghl-values.md`, ready to paste |
+| Wed 23 September | The clinic | Your snapshot loaded, your words pasted in, published, and one real email in your own inbox |
 | Thu 24 September | Fix window | Anything that went wrong on the Wednesday, sorted |
 | Fri 25 to Sun 27 September | Atlanta | Using all of it. Nothing is set up on the day |
 
@@ -30,23 +31,24 @@ In the session: download Claude for desktop and sign in, install the toolkit, co
 
 **Your download is a copy, not a live link.** Anything you rebuild in the app afterwards has to be downloaded again.
 
-### Before the clinic
+### That same week, at home
 
-Three things, and they take about ten minutes together.
+Four things. The third is the real job, and it takes about half an hour.
 
-1. **Update the toolkit.** It is not automatic, and the step that fills your snapshot's words arrived in a later version. [docs/UPDATE-YOUR-SETUP.md](UPDATE-YOUR-SETUP.md) is how.
-2. **Say "where am I up to"** and read the answer.
-3. **Check `ops-workflow.md` exists.** It names the one snapshot you chose and holds its copy, and everything at the clinic reads it. If it is missing, say "build my ops engine" and do it now rather than on the day.
+1. **Update the toolkit.** It is not automatic, and the step that writes your snapshot's words arrived in a later version. [docs/UPDATE-YOUR-SETUP.md](UPDATE-YOUR-SETUP.md) is how.
+2. **Check `ops-workflow.md` exists.** Say "where am I up to". That file names the one snapshot you chose, and your words cannot be written without it. If it is missing, say "build my ops engine" and do it now.
+3. **Write your GoHighLevel words.** Say "fill my custom values". Claude reads your Brain and your engine files, asks you the few things nothing else answers, and writes every message your snapshot will arrive without into `ghl-values.md`. You do not need the snapshot to do this, and doing it now is what turns the day into a paste.
+4. **Read the words back.** They are yours, going to real people. Changing a word now costs nothing. Changing it on the day costs your place in the queue.
 
 ### The clinic, Wednesday 23 September
 
-About an hour. You load your snapshot, fill the words it arrives without, publish, and send yourself one real test.
+About half an hour, and most of it is pasting. You load your snapshot, paste in the words you wrote the week before, publish, and send yourself one real test.
 
 Both things have to be true before you travel: your snapshot loaded and sending, and your Brain proved to be read by Claude on your own machine.
 
-[docs/AFTER-THE-ENGINES.md](AFTER-THE-ENGINES.md) is the whole hour, step by step. Read it once before the day.
+[docs/AFTER-THE-ENGINES.md](AFTER-THE-ENGINES.md) is both halves, the writing and the day, step by step. Read it once in the week of Session 3.
 
-**Bring:** your laptop, your GoHighLevel login, a second email address you can read, and your phone.
+**Bring:** your laptop with `ghl-values.md` written and open, your GoHighLevel login, a second email address you can read, and your phone.
 
 ### Thursday 24 September
 

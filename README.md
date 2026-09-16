@@ -2,7 +2,7 @@
 
 Claude plugin for Launchhouse Atlanta, 25 to 27 September 2026.
 
-> **In use.** This is version 0.2.0, the toolkit founders on the programme are running. The clinic is Wednesday 23 September, and [docs/AFTER-THE-ENGINES.md](docs/AFTER-THE-ENGINES.md) is what happens on the day. Fixes only from here.
+> **In use.** This is version 0.2.0, the toolkit founders on the programme are running. The words are written in the week before, and the clinic is Wednesday 23 September. [docs/AFTER-THE-ENGINES.md](docs/AFTER-THE-ENGINES.md) is both. Fixes only from here.
 
 ## Two halves, and this repository is the second one
 
@@ -20,7 +20,7 @@ So the app makes the work and Claude runs it. Neither half replaces the other.
 
 [docs/UPDATE-YOUR-SETUP.md](docs/UPDATE-YOUR-SETUP.md) is how a founder who has already downloaded their work takes the newest toolkit, and what to say to one who is afraid of losing it.
 
-[docs/AFTER-THE-ENGINES.md](docs/AFTER-THE-ENGINES.md) is what a founder does once their engines are written: update the toolkit, load the snapshot, fill the words it arrives without, publish, and test it for real.
+[docs/AFTER-THE-ENGINES.md](docs/AFTER-THE-ENGINES.md) is what a founder does once their engines are written: update the toolkit, write the words their snapshot will arrive without, then load it, paste them in, publish, and test it for real.
 
 ## Install the plugin
 
@@ -50,7 +50,7 @@ Every command starts with `/growth-engine:` because that is how installed plugin
 | `/growth-engine:content` | "build my content engine" | Pillars and your 30 posts or scripts |
 | `/growth-engine:engine2` | "build my outreach engine" or "build my audience engine" | Outreach (B2B) or audience (B2C), picked automatically from your track |
 | `/growth-engine:ops` | "find my bottleneck" | Bottleneck, snapshot choice, workflow copy |
-| `/growth-engine:values` | "fill my custom values" | After your snapshot is loaded: writes every message it arrived without, and gets them into your account |
+| `/growth-engine:values` | "fill my custom values" | Writes every message your chosen snapshot will arrive without. Run it before the snapshot is loaded, then paste the words in |
 | `/growth-engine:plan` | "build my 90 day plan" | Your 90-day plan |
 | `/growth-engine:playbook` | "generate my playbook insert" | Your personalised playbook insert, delivered as a PDF |
 | `/growth-engine:status` | "where am I up to" | Where you are up to |
@@ -69,7 +69,7 @@ Start with the Brain: `/growth-engine:brain`, or just say "build my founder brai
 | outreach-b2b | List criteria, sequence copy, personalised first lines | B2B |
 | audience-b2c | Targeting, 25 DM openers, hook bank, inbound scripts | B2C |
 | ghl-workflows | Bottleneck diagnostic, snapshot choice, all workflow copy | Both |
-| ghl-values | The words your loaded snapshot is waiting for, written and put into your account | Both |
+| ghl-values | The words your chosen snapshot will arrive without, written before it loads and pasted in after | Both |
 | growth-plan | Your 90-day plan with kill criteria | Both |
 | playbook-export | Your personalised playbook insert, as a PDF | Both |
 | status | Where you are up to and what is outstanding | Both |

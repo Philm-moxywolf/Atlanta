@@ -102,6 +102,14 @@ Nothing new. The connectors are free, the plugin is free, and Apollo and GoHighL
 
 Your Claude plan is the one cost, and you are on it for the desktop app anyway.
 
+## What to do this week
+
+One job, about half an hour, and it is what makes the Wednesday easy.
+
+Say **"fill my custom values"**. Claude reads your Brain and your ops file and writes every message your GoHighLevel snapshot will arrive without, into `ghl-values.md` in your folder. You do not need the snapshot to do it, and doing it now means the Wednesday is a paste rather than an hour of writing.
+
+Read the words back and change anything that does not sound like you. [docs/AFTER-THE-ENGINES.md](AFTER-THE-ENGINES.md) is the step by step, for this week and for the day itself.
+
 ## Stuck
 
 Post in the Slack channel. Do not wait for the session.
