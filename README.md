@@ -4,6 +4,8 @@ Claude plugin for Launchhouse Atlanta, 25 to 27 September 2026.
 
 > **In use.** This is version 0.2.0, the toolkit founders on the programme are running. The words are written in the week before, and the clinic is Wednesday 23 September. [docs/AFTER-THE-ENGINES.md](docs/AFTER-THE-ENGINES.md) is both. Fixes only from here.
 
+> **From Session 3, Launchhouse runs on [launchhouse-v3](https://github.com/Philm-moxywolf/launchhouse-v3).** Founders take a private copy of it, open that copy in Claude, and say "bring my work across". It loads the same three snapshots and writes the same words as this toolkit, so nothing made in the app is wasted. This repository stays for founders who already installed it, and it is still where the app's engine text comes from.
+
 ## Two halves, and this repository is the second one
 
 Founders use two things, in this order, and knowing which is which saves a lot of confusion.

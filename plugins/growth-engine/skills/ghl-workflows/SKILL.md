@@ -44,7 +44,7 @@ Then name the bottleneck in one sentence, in their words. Confirm it with them b
 | B2C | **B2C** | Essentials B2C, Comment to DM, DM qualify and book, Review request |
 | Either, hybrid | **Hybrid** | One Essentials, plus all six packs, on a board of its own |
 
-Every pack arrives as drafts, in the snapshot's one workflow folder. Nothing runs until the founder publishes it, so what the bottleneck decides is **which pack they publish first, and whose words get written first.**
+Every pack arrives as drafts. Nothing runs until the founder publishes it, so what the bottleneck decides is **which pack they publish first, and whose words get written first.**
 
 ### B2B packs
 

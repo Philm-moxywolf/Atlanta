@@ -2,6 +2,8 @@
 
 Where you are, what is left, and what has to be true before you travel. Today is the week of Session 3.
 
+> **From Session 3, Launchhouse runs on [launchhouse-v3](https://github.com/Philm-moxywolf/launchhouse-v3).** You take a private copy of it, open that copy in Claude, and say "bring my work across". It loads the same snapshots and writes the same words as this toolkit. Its own road to Atlanta page is the one to follow. This page stays for anyone who installed the older toolkit. If that is you, your work is safe in your own folder: bring it across to the new copy, then remove this toolkit from the Plugins panel so only one set of commands answers.
+
 ## The whole arc
 
 | When | What | What you leave with |
@@ -23,9 +25,9 @@ Where you are, what is left, and what has to be true before you travel. Today is
 
 The handover. Up to now the work has been in the app. From here it is in Claude on your own machine.
 
-In the session: download Claude for desktop and sign in, install the toolkit, connect GoHighLevel and, for B2B, Apollo, then download everything from the app's Files screen and open that folder in Claude.
+In the session: download Claude for desktop and sign in, take your private copy of launchhouse-v3 and open it in Claude, connect GoHighLevel and, for B2B, Apollo, then download everything from the app's Files screen and say "bring my work across".
 
-[docs/WORKING-IN-CLAUDE.md](WORKING-IN-CLAUDE.md) is sent before it and is the step by step.
+The [launchhouse-v3 README](https://github.com/Philm-moxywolf/launchhouse-v3) is the step by step.
 
 **The one thing to understand.** Inside the app, the rules are enforced in code: a file that invents a number or offers to automate cold DMs is held before it is saved. Outside the app they are advice, and Claude has your accounts and can send. Two rules are now yours to hold. Never automate cold Instagram DMs. Never let a number you cannot prove reach a real person.
 

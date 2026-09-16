@@ -6,6 +6,8 @@ By now the app has your Founder Brain, your voice, your 30 pieces and your engin
 
 **After this session you work in Claude, not in the app.** That is where you will be in Atlanta and every week after it. The app made the work. Claude is where you use it.
 
+> **From Session 3, Launchhouse runs on [launchhouse-v3](https://github.com/Philm-moxywolf/launchhouse-v3).** You take a private copy of it, open that copy in Claude, and say "bring my work across". It loads the same snapshots and writes the same words as this toolkit. Its README is the step by step for this session. This page stays for anyone who installed the older toolkit. If that is you, your work is safe in your own folder: bring it across to the new copy, then remove this toolkit from the Plugins panel so only one set of commands answers.
+
 ## Why bother, when the app already works
 
 Three reasons, and if none of them matter to you, skip this until after Atlanta.

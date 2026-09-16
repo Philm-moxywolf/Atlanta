@@ -2,6 +2,8 @@
 
 You already downloaded your work and opened it in Claude. This is how to take the newest toolkit, and it takes about two minutes.
 
+> **From Session 3, Launchhouse runs on [launchhouse-v3](https://github.com/Philm-moxywolf/launchhouse-v3).** You take a private copy of it, open that copy in Claude, and say "bring my work across". It loads the same snapshots and writes the same words as this toolkit. Its own update page is the one to follow. This page stays for anyone who installed the older toolkit. If that is you, your work is safe in your own folder: bring it across to the new copy, then remove this toolkit from the Plugins panel so only one set of commands answers.
+
 ## First, the thing founders worry about
 
 **The toolkit is the instructions. Your folder is your work. They are two different things.**

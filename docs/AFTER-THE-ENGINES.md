@@ -4,6 +4,8 @@ Sent before Session 3. It covers two days, not one: the evening after the sessio
 
 Read it once now. The writing takes about half an hour, the evening after Session 3. The clinic takes about half an hour, and fifteen minutes of that is pasting.
 
+> **From Session 3, Launchhouse runs on [launchhouse-v3](https://github.com/Philm-moxywolf/launchhouse-v3).** You take a private copy of it, open that copy in Claude, and say "bring my work across". It loads the same snapshots and writes the same words as this toolkit. Its README links its own copy of this page, and that is the one to follow. This page stays for anyone who installed the older toolkit. If that is you, your work is safe in your own folder: bring it across to the new copy, then remove this toolkit from the Plugins panel so only one set of commands answers.
+
 ## 1. Update the plugin
 
 **This is the plugin in Claude, not the app.** Updating the app is a separate thing, it follows the steps we post in Slack, and nothing here asks you to touch it.
@@ -47,7 +49,7 @@ Say **"fill my custom values"**, or type `/growth-engine:values`.
 
 Claude reads your Brain and your engine files, asks you the few things nothing else answers, writes every message in your voice, and saves them to `ghl-values.md` in your folder.
 
-Your track decides your snapshot, so there is nothing to choose. It arrives as one workflow folder holding **Essentials**, which everybody gets, and its packs. Each workflow's name starts with the pack it belongs to.
+Your track decides your snapshot, so there is nothing to choose. It brings **Essentials**, which everybody gets, and its packs. Each workflow's name starts with the pack it belongs to.
 
 | Your snapshot | What is in it | Words to write |
 |---|---|---|
