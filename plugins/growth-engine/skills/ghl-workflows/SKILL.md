@@ -21,6 +21,8 @@ If it genuinely does not exist, stop. Tell the founder to run `/growth-engine:br
 
 Use it for track, stage, offer and goal.
 
+**If `./growth-engine/ops-workflow.md` already exists, the bottleneck is already found, so do not run the diagnostic again.** The pack it names is the pack to publish first, even when the file calls it a snapshot, as files from the app do (Comment-to-DM capture is the Comment to DM pack). Keep the file as it is. Ask whether they want to change the copy or put a different pack first, and go straight there. Change only what they ask for, and never replace their copy without their yes. The other packs get their words from the values step, not here.
+
 ## Step 1: bottleneck diagnostic
 
 Find the one repetitive task that costs the most time or leaks the most revenue. Ask:
@@ -40,9 +42,9 @@ Then name the bottleneck in one sentence, in their words. Confirm it with them b
 |---|---|---|
 | B2B | **B2B** | Essentials B2B, Lead follow-up, Discovery booking, Proposal chase |
 | B2C | **B2C** | Essentials B2C, Comment to DM, DM qualify and book, Review request |
-| Either, hybrid | **Hybrid** | One Essentials, plus packs from both sides |
+| Either, hybrid | **Hybrid** | One Essentials, plus all six packs, on a board of its own |
 
-Every pack arrives as drafts, in its own workflow folder. Nothing runs until the founder publishes it, so what the bottleneck decides is **which folder they publish first, and whose words get written first.**
+Every pack arrives as drafts, in the snapshot's one workflow folder. Nothing runs until the founder publishes it, so what the bottleneck decides is **which pack they publish first, and whose words get written first.**
 
 ### B2B packs
 
@@ -64,21 +66,19 @@ The list is deliberately small. If the founder's bottleneck falls outside these 
 
 **Name the platform from the table, never from memory.** A B2C pack runs on Instagram. Saying one runs on LinkedIn puts the other track's platform in front of a founder who is not on it, and it sends them to the wrong place on the day.
 
-Name the pack that answers their bottleneck, say why, and let them override. The rest of their snapshot stays as drafts until they want it.
+Name the pack that answers their bottleneck, say why, and let them override. That one pack is what the output file records as the chosen snapshot, exactly as it always has. The rest of their snapshot stays as drafts until they want it.
 
 ## Step 3: write the copy
 
 The snapshot is the plumbing. The copy is the founder's.
 
-For the chosen snapshot, write every message it sends: emails with subject lines, DM replies, public comment replies and the words on any buttons. Written in the captured voice, matched to track.
-
-Two rules that make the copy usable later. **No greeting inside a message body:** the workflow step writes the greeting and the first name above it. **Nothing in square or curly brackets:** the words in a slot are the same for everyone who receives that message, and anything about one person is merged by the step.
+For the pack they publish first, write every message it sends: emails with subject lines, SMS, DM replies, internal notifications, and for an Instagram pack its public comment replies and the words on its buttons. Written in the captured voice, matched to track.
 
 Also specify: the trigger, the wait intervals between steps, the exit condition, and which tags get applied.
 
 Keep waits realistic. Chasing someone four times in two days annoys them.
 
-**On the two DM snapshots, check the trigger before you write a word.** Both start with something the other person did: a comment on a post, or a message they sent in. Write the copy as the answer to that. If you find yourself writing to somebody who has done neither, the trigger is wrong, and no amount of rewriting the copy fixes it.
+**On the two DM packs, check the trigger before you write a word.** Both start with something the other person did: a comment on a post, or a message they sent in. Write the copy as the answer to that. If you find yourself writing to somebody who has done neither, the trigger is wrong, and no amount of rewriting the copy fixes it.
 
 **No message claims a result the Brain does not record.** A review request that says join our 200 happy customers is an invented number, sent to a real customer who can count. If the Brain has no number, ask for the review on the work the founder actually did for that person, and name the work.
 
