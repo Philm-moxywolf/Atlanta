@@ -12,7 +12,7 @@ Where you are, what is left, and what has to be true before you travel. Today is
 | Mon 14 or Tue 15 September | Session 2 | GoHighLevel bought and connected, Apollo finished for B2B |
 | Between 2 and 3 | Homework | Your second engine, and your operations engine: one snapshot chosen and all its copy |
 | Mon 21 or Tue 22 September | Session 3 | Your work out of the app and into Claude on your own machine |
-| That week | Homework | Your GoHighLevel words written, in `ghl-values.md`, ready to paste |
+| That evening | Homework | Your GoHighLevel words written, in `ghl-values.md`, ready to paste |
 | Wed 23 September | The clinic | Your snapshot loaded, your words pasted in, published, and one real email in your own inbox |
 | Thu 24 September | Fix window | Anything that went wrong on the Wednesday, sorted |
 | Fri 25 to Sun 27 September | Atlanta | Using all of it. Nothing is set up on the day |
@@ -31,9 +31,9 @@ In the session: download Claude for desktop and sign in, install the toolkit, co
 
 **Your download is a copy, not a live link.** Anything you rebuild in the app afterwards has to be downloaded again.
 
-### That same week, at home
+### Between Session 3 and the clinic
 
-Four things. The third is the real job, and it takes about half an hour.
+Four things, and it is a short gap: Session 3 is the Monday or Tuesday and the clinic is the Wednesday. The third is the real job, and it takes about half an hour, so do it the same evening.
 
 1. **Update the toolkit.** It is not automatic, and the step that writes your snapshot's words arrived in a later version. [docs/UPDATE-YOUR-SETUP.md](UPDATE-YOUR-SETUP.md) is how.
 2. **Check `ops-workflow.md` exists.** Say "where am I up to". That file names the one snapshot you chose, and your words cannot be written without it. If it is missing, say "build my ops engine" and do it now.
@@ -46,7 +46,7 @@ About half an hour, and most of it is pasting. You load your snapshot, paste in 
 
 Both things have to be true before you travel: your snapshot loaded and sending, and your Brain proved to be read by Claude on your own machine.
 
-[docs/AFTER-THE-ENGINES.md](AFTER-THE-ENGINES.md) is both halves, the writing and the day, step by step. Read it once in the week of Session 3.
+[docs/AFTER-THE-ENGINES.md](AFTER-THE-ENGINES.md) is both halves, the writing and the day, step by step. Read it once before Session 3.
 
 **Bring:** your laptop with `ghl-values.md` written and open, your GoHighLevel login, a second email address you can read, and your phone.
 

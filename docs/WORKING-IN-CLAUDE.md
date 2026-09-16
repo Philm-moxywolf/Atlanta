@@ -102,9 +102,9 @@ Nothing new. The connectors are free, the plugin is free, and Apollo and GoHighL
 
 Your Claude plan is the one cost, and you are on it for the desktop app anyway.
 
-## What to do this week
+## What to do tonight
 
-One job, about half an hour, and it is what makes the Wednesday easy.
+One job, about half an hour, and it is what makes the Wednesday easy. The clinic is the day after tomorrow, so do it before you go to bed if you can.
 
 Say **"fill my custom values"**. Claude reads your Brain and your ops file and writes every message your GoHighLevel snapshot will arrive without, into `ghl-values.md` in your folder. You do not need the snapshot to do it, and doing it now means the Wednesday is a paste rather than an hour of writing.
 

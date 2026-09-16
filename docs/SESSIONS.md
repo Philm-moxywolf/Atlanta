@@ -74,7 +74,7 @@ The steps are in [docs/WORKING-IN-CLAUDE.md](WORKING-IN-CLAUDE.md), sent before 
 
 ### Your homework
 
-**Write your GoHighLevel words.** Say "fill my custom values". Claude reads your Brain and your ops file and writes every message your snapshot will arrive without, into `ghl-values.md`. It does not need the snapshot, and this is the job that makes the clinic a paste rather than an hour of writing. About half an hour, and [docs/AFTER-THE-ENGINES.md](AFTER-THE-ENGINES.md) is the step by step.
+**Write your GoHighLevel words.** Say "fill my custom values". Claude reads your Brain and your ops file and writes every message your snapshot will arrive without, into `ghl-values.md`. It does not need the snapshot, and this is the job that makes the clinic a paste rather than an hour of writing. About half an hour, and the clinic is the next day, so do it the same evening. [docs/AFTER-THE-ENGINES.md](AFTER-THE-ENGINES.md) is the step by step.
 
 **Then use it.** Ask it for things. Publish something. The point of the fortnight before Atlanta is that the weekend is not the first time you have done this.
 
