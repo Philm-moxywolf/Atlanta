@@ -82,7 +82,9 @@ Roughly one founder in six needs this. If the founder does not clearly need it, 
 
 Write `./growth-engine/ops-workflow.md` containing the named bottleneck, the chosen snapshot, all message copy, the trigger, the timings, the exit condition, and the tags.
 
-The founder takes this to the setup clinic on 23 September, loads the snapshot, and pastes the copy in.
+The founder takes this to the setup clinic on 23 September and loads the snapshot. Loading brings every workflow and the empty name of every message slot, and none of the words.
+
+The words go in next, with `/growth-engine:values`, or by saying "fill my custom values". Publishing and the first live test come after that: a published workflow with empty values sends blank emails to real people.
 
 ## Gate
 

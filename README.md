@@ -16,6 +16,8 @@ So the app makes the work and Claude runs it. Neither half replaces the other.
 
 [docs/SESSIONS.md](docs/SESSIONS.md) is what happens in each session and what the homework is.
 
+[docs/AFTER-THE-ENGINES.md](docs/AFTER-THE-ENGINES.md) is what a founder does once their engines are written: update the plugin, load the snapshot, fill the words it arrives without, publish, and test it for real.
+
 ## Install the plugin
 
 You install once. Cowork and Claude Code share the same plugin, so it is available in both.
@@ -44,6 +46,7 @@ Every command starts with `/growth-engine:` because that is how installed plugin
 | `/growth-engine:content` | "build my content engine" | Pillars and your 30 posts or scripts |
 | `/growth-engine:engine2` | "build my outreach engine" or "build my audience engine" | Outreach (B2B) or audience (B2C), picked automatically from your track |
 | `/growth-engine:ops` | "find my bottleneck" | Bottleneck, snapshot choice, workflow copy |
+| `/growth-engine:values` | "fill my custom values" | After your snapshot is loaded: writes every message it arrived without, and gets them into your account |
 | `/growth-engine:plan` | "build my 90 day plan" | Your 90-day plan |
 | `/growth-engine:playbook` | "generate my playbook insert" | Your personalised playbook insert, delivered as a PDF |
 | `/growth-engine:status` | "where am I up to" | Where you are up to |
@@ -62,6 +65,7 @@ Start with the Brain: `/growth-engine:brain`, or just say "build my founder brai
 | outreach-b2b | List criteria, sequence copy, personalised first lines | B2B |
 | audience-b2c | Targeting, 25 DM openers, hook bank, inbound scripts | B2C |
 | ghl-workflows | Bottleneck diagnostic, snapshot choice, all workflow copy | Both |
+| ghl-values | The words your loaded snapshot is waiting for, written and put into your account | Both |
 | growth-plan | Your 90-day plan with kill criteria | Both |
 | playbook-export | Your personalised playbook insert, as a PDF | Both |
 | status | Where you are up to and what is outstanding | Both |

@@ -80,7 +80,7 @@ Use it. Ask it for things. Publish something. The point of the fortnight before 
 
 Two things, and both have to be true before you travel.
 
-**Your workflow, loaded.** You bring your operations file, load your one GoHighLevel workflow, paste your copy in, and send yourself one test through the real trigger.
+**Your workflow, loaded and sending.** You bring your operations file and load your one GoHighLevel snapshot. It arrives as a pack: the workflows, your pipeline, your forms, your tags, and the empty name of every message. Your words are the one thing it does not bring, so you fill those in as custom values, publish, and send yourself one test through the real trigger. [docs/AFTER-THE-ENGINES.md](AFTER-THE-ENGINES.md) is that half hour, step by step.
 
 **Your Brain, proved.** We check that Claude on your machine is reading your Brain and writing as you. If something is wrong with the handover, this is where it gets found, with two days to fix it rather than none.
 
